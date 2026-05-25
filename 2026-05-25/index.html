@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>晨间财经网页简报 2026-05-25</title>
+  <style>
+    :root {
+      --bg: #f3f6f4;
+      --paper: #ffffff;
+      --ink: #16221f;
+      --muted: #66746f;
+      --line: #d8e2dd;
+      --green: #0d7a53;
+      --green-soft: #e7f4ee;
+      --red: #b03f37;
+      --gold: #a06d12;
+      --shadow: 0 16px 34px rgba(10, 37, 28, 0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.66;
+    }
+    a { color: var(--green); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    .hero {
+      position: relative;
+      min-height: 520px;
+      display: grid;
+      align-items: end;
+      background: #10251f;
+      overflow: hidden;
+    }
+    .hero img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(6, 17, 15, 0.88), rgba(6, 17, 15, 0.42) 55%, rgba(6, 17, 15, 0.15));
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 58px 0 56px;
+      color: #fff;
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.28);
+      background: rgba(255,255,255,0.1);
+      font-size: 13px;
+      letter-spacing: 0.03em;
+    }
+    h1 {
+      max-width: 920px;
+      margin: 18px 0 0;
+      font-size: clamp(34px, 6vw, 68px);
+      line-height: 1.02;
+    }
+    .subtitle {
+      max-width: 800px;
+      margin: 18px 0 0;
+      font-size: 18px;
+      color: rgba(255,255,255,0.82);
+    }
+    .fact-bar {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .fact-pill {
+      padding: 14px 16px;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.16);
+      backdrop-filter: blur(6px);
+      font-size: 14px;
+    }
+    main { padding: 30px 0 54px; }
+    .ticker {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: -68px;
+      position: relative;
+      z-index: 2;
+    }
+    .ticker-card, .card, .source-box, .idea-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+    .ticker-card { padding: 18px; }
+    .label { color: var(--muted); font-size: 13px; }
+    .value { margin-top: 6px; font-size: 26px; font-weight: 760; }
+    .move { margin-top: 8px; font-size: 14px; font-weight: 700; }
+    .up { color: var(--green); }
+    .down { color: var(--red); }
+    .flat { color: var(--gold); }
+    .section { margin-top: 28px; }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 20px;
+      margin-bottom: 12px;
+    }
+    h2 { margin: 0; font-size: 28px; line-height: 1.2; }
+    .note { max-width: 460px; color: var(--muted); font-size: 14px; text-align: right; }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+      gap: 18px;
+    }
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .card, .source-box, .idea-card { padding: 22px; }
+    .lead { margin: 0 0 16px; font-size: 18px; color: #294038; }
+    .bullet-list, .source-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 14px;
+    }
+    .bullet-list li {
+      padding-left: 16px;
+      border-left: 3px solid var(--green);
+    }
+    .source-list li {
+      display: grid;
+      gap: 6px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+    .source-list li:last-child { border-bottom: 0; padding-bottom: 0; }
+    .source-list span { color: var(--muted); font-size: 13px; }
+    .image-card {
+      overflow: hidden;
+      padding: 0;
+    }
+    .image-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .image-caption {
+      padding: 16px 18px 18px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .idea-card h3 {
+      margin: 0 0 12px;
+      font-size: 21px;
+    }
+    .idea-card p {
+      margin: 0 0 10px;
+    }
+    .risk-box {
+      background: linear-gradient(180deg, #fffef7, #fff9ea);
+    }
+    .footer {
+      margin-top: 26px;
+      padding: 18px 22px;
+      border-radius: 8px;
+      border: 1px solid #ecdcb4;
+      background: #fff7df;
+      color: #5a4a23;
+      font-size: 14px;
+    }
+    @media (max-width: 900px) {
+      .ticker, .fact-bar, .grid-2, .grid-4 { grid-template-columns: 1fr; }
+      .section-head { display: block; }
+      .note { margin-top: 8px; text-align: left; }
+      .ticker { margin-top: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <img src="../assets/morning-brief-2026-05-25-hero.svg" alt="晨间财经简报主题图">
+    <div class="wrap hero-content">
+      <div class="eyebrow">北京时间 2026-05-25｜有效晨报日｜A股开市 港美休市</div>
+      <h1>A股独自开盘，港美休市下政策与主题交易权重上升</h1>
+      <p class="subtitle">今天是有效晨报日。A股正常交易，港股因佛诞休市，美股因 Memorial Day 休市。结论上，A股将承接全球周末消息与政策线索，但失去北向即时定价，盘面更依赖内资、主题资金与政策预期。</p>
+      <div class="fact-bar">
+        <div class="fact-pill">A股 5 月 25 日正常交易；港股因佛诞休市；美股因 Memorial Day 休市。</div><div class="fact-pill">港股休市意味着南向与北向 Stock Connect 同步关闭，A股全天缺少北向边际增量信号。</div><div class="fact-pill">美国周末前风险资产表现仍受利率、油价和科技业绩指引牵引，本周重新开市后将继续围绕通胀与 AI 资本开支定价。</div>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="ticker">
+<div class="ticker-card">
+  <div class="label">A股</div>
+  <div class="value">正常交易</div>
+  <div class="move flat">北向关闭，内资主导</div>
+</div>
+
+<div class="ticker-card">
+  <div class="label">港股</div>
+  <div class="value">休市</div>
+  <div class="move down">佛诞假期</div>
+</div>
+
+<div class="ticker-card">
+  <div class="label">美股</div>
+  <div class="value">休市</div>
+  <div class="move down">Memorial Day</div>
+</div>
+
+<div class="ticker-card">
+  <div class="label">核心主线</div>
+  <div class="value">政策+产业链</div>
+  <div class="move up">稀土 / AI算力 / 券商</div>
+</div>
+</section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>全球隔夜 / 最新财经要闻</h2>
+        <p class="note">这一部分优先陈述交易事实与宏观背景，再区分可能对 A 股开盘最有影响的线索。</p>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <ul class="bullet-list"><li><strong>交易日结构：</strong> 今天并非全市场假期版，A股是主交易市场，港股与美股休市将削弱跨市场价格锚，提升人民币资产自定价权重。</li><li><strong>宏观与利率：</strong> 美联储仍维持对通胀与就业数据的依赖式表态，假期期间美元和美债收益率的方向性变化，仍会影响 A 股开盘后的成长/红利风格偏好。</li><li><strong>地缘与大宗：</strong> 中东、俄乌及供应链安全议题仍是油气、航运、军工和有色的重要情绪变量，若油价在欧美休市期间继续波动，将通过化工与航空链条影响 A 股风险偏好。</li><li><strong>科技资本开支：</strong> 美国大型科技和算力供应链的资本开支口径，仍是全球半导体、服务器、光模块和电力设备估值锚。</li></ul>
+        </article>
+        <aside class="card image-card">
+          <img src="../assets/morning-brief-2026-05-25-flows.svg" alt="今日资金与交易结构">
+          <div class="image-caption">结构上，今天的市场特征不是全球联动，而是 A 股在北向关闭情形下的自定价。邮件版同样内嵌此图，避免附件打开丢图。</div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>中国 A 股重点关注</h2>
+        <p class="note">重点看政策、宏观、行业、情绪与资金面如何在“北向缺席日”重排优先级。</p>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <p class="lead">A股今天的关键不是“跟随外盘”，而是“在缺少北向价格信号时，哪些主线仍有内生催化”。政策、产业链安全和金融活跃度是三条主线。</p>
+          <ul class="bullet-list"><li><strong>政策面：</strong> 5 月 LPR 维持低位，货币政策执行报告延续“适度宽松”口径，利于稳增长与信用修复预期，但短期更偏估值托底，而非立即转化为全面盈利改善。</li><li><strong>资金面：</strong> 由于港股休市，今天北向资金关闭。盘中情绪更看公募、私募、量化与两融，指数权重股的持续性需靠内资接力验证。</li><li><strong>行业面：</strong> 稀土、资源安全、算力基础设施、券商和高股息央国企，兼具政策、供给和风格切换逻辑，更容易成为低外资参与日的主导方向。</li><li><strong>风险点：</strong> 若成交额未能放大，主题轮动会快于趋势扩散；若商品价格回落，资源股弹性可能先于基本面回吐。</li></ul>
+        </article>
+        <article class="card">
+          <p class="lead">交易结论</p>
+          <ul class="bullet-list"><li>事实层面，A股今天的价格锚主要来自周末消息、政策口径和商品走势，而不是港美盘中新变化。</li><li>推断层面，若早盘量能不足，板块会优先在稀土、券商、算力和高股息之间轮动，而不是全面扩散。</li><li>建议关注方向上，优先看有政策或供给催化、且能被本土资金快速理解的主线。</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>美股重点关注</h2>
+        <p class="note">今天无交易，但美债、美元、科技资本开支和本周数据仍决定风险偏好上限。</p>
+      </div>
+      <article class="card">
+        <p class="lead">美股今天休市，但并不意味着美股线索缺席。A股与港股对美国方向的观察，转向美元、利率、AI 资本开支与本周数据日程。</p>
+        <ul class="bullet-list"><li><strong>指数环境：</strong> 假期前美股仍由大型科技和利率预期驱动，市场并未脱离“盈利兑现 + 估值约束”的双线框架。</li><li><strong>科技龙头：</strong> Nvidia 的业绩与资本开支表态，继续决定全球 AI 服务器、HBM、光模块、电力和冷却链条的风险偏好上限。</li><li><strong>利率与美元：</strong> 10 年期美债收益率若重新上行，A股成长与港股互联网估值承压；若收益率回落，则科技成长弹性更大。</li><li><strong>产业线索：</strong> 云厂商扩产、企业软件预算、汽车智能化与电力基础设施，仍是跨市场最强的业绩传导链。</li></ul>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>港股重点关注</h2>
+        <p class="note">今天主要是预期管理，真正的价格验证要等港股复市和南向资金恢复。</p>
+      </div>
+      <article class="card">
+        <p class="lead">港股今天休市，交易意义从“价格发现”转向“持仓与预期管理”。对 A 股而言，港股缺位会减少互联网和中概的即时映射。</p>
+        <ul class="bullet-list"><li><strong>资金结构：</strong> 今天无南向资金，港股无法对 A 股科技、金融和高股息资产形成盘中联动，A股银行、保险、券商更多看本土资金取向。</li><li><strong>互联网与中概：</strong> 假期期间若 ADR 和外围期指偏强，港股复市后互联网平台、硬科技和消费平台更容易出现补涨交易。</li><li><strong>地产与金融：</strong> 港股地产和内银仍受内地政策预期影响，但在缺少当天成交验证时，更适合作为 A/H 风格比较的次级线索。</li><li><strong>观察重点：</strong> 复市后需看恒生科技指数对 AI、云、智能终端和出海链条的承接力，以及南向资金是否回流龙头平台股。</li></ul>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>今日重点板块建议关注</h2>
+        <p class="note">以下为研究提示，不是交易指令。每个方向都同时写明催化与主要风险。</p>
+      </div>
+      <div class="grid-4">
+<article class="idea-card">
+  <h3>稀土与资源安全链</h3>
+  <p><strong>关注理由：</strong>出口管制、供应链安全和战略资源议题持续升温，供给约束使板块具备事件驱动属性。</p>
+  <p><strong>催化因素：</strong>政策口径强化、海外供应担忧、磁材/永磁订单预期改善。</p>
+  <p><strong>主要风险：</strong>若政策表述边际缓和或商品价格冲高回落，追高资金回撤会很快。</p>
+</article>
+
+<article class="idea-card">
+  <h3>AI 算力与电力基础设施</h3>
+  <p><strong>关注理由：</strong>美国科技资本开支仍是全球算力链估值锚，A股映射到服务器、电源、液冷、光模块和电网设备。</p>
+  <p><strong>催化因素：</strong>海外龙头业绩、云厂商扩产、国内智算中心项目推进。</p>
+  <p><strong>主要风险：</strong>若美债收益率上行压估值，成长板块容易先杀估值后看订单。</p>
+</article>
+
+<article class="idea-card">
+  <h3>券商与资本市场活跃度</h3>
+  <p><strong>关注理由：</strong>低外资参与日里，若政策预期升温且成交额放大，券商往往充当风险偏好的放大器。</p>
+  <p><strong>催化因素：</strong>监管表态、并购重组、交投放量、两融余额回升。</p>
+  <p><strong>主要风险：</strong>若量能不足或只出现脉冲式拉升，持续性通常偏弱。</p>
+</article>
+
+<article class="idea-card">
+  <h3>高股息央国企</h3>
+  <p><strong>关注理由：</strong>在港美休市、外部波动不明时，高股息仍具备防御与资金容纳功能。</p>
+  <p><strong>催化因素：</strong>利率回落、险资配置、红利再平衡需求。</p>
+  <p><strong>主要风险：</strong>若成长风格突然扩散，高股息可能阶段性跑输。</p>
+</article>
+</div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>今日风险提示与关键日程</h2>
+        <p class="note">把“今天能确认的事实”和“今天需要盯盘验证的推断”分开看，误判会少很多。</p>
+      </div>
+      <article class="card risk-box">
+        <ul class="bullet-list"><li><strong>事实：</strong> 今日港股与美股休市，跨市场价格锚减弱，A股消息面影响被放大。</li><li><strong>事实：</strong> 北向与南向互联互通暂停，盘中资金解读不能简单套用平日经验。</li><li><strong>推断：</strong> 若假期期间美元走强或油价上行，A股成长与航空化工链条可能出现分化。</li><li><strong>关注：</strong> 本周需跟踪美国后续开市后的通胀/消费/房地产数据、科技公司财报及中国后续稳增长政策表态。</li></ul>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>来源链接</h2>
+        <p class="note">优先使用交易所、监管、央行、公司 IR 与官方数据页面；不足部分以公开财经资讯交叉验证。</p>
+      </div>
+      <article class="source-box">
+        <ul class="source-list"><li><a href="https://www.nyse.com/markets/hours-calendars">NYSE Holidays &amp; Trading Hours</a><span>确认 2026-05-25 美股因 Memorial Day 休市。</span></li><li><a href="https://www.nasdaq.com/market-activity/stock-market-holiday-calendar">Nasdaq Market Holiday Calendar</a><span>交叉验证美股休市安排。</span></li><li><a href="https://www.hkex.com.hk/Services/Trading-hours-and-Severe-Weather-Arrangements/Holiday-Schedule?sc_lang=en">HKEX Holiday Schedule 2026</a><span>确认 2026-05-25 佛诞港股休市。</span></li><li><a href="https://www.hkex.com.hk/Mutual-Market/Stock-Connect/Reference-Materials/Trading-Hour-Trading-and-Settlement-Calendar?sc_lang=en">HKEX Stock Connect Calendar</a><span>确认港股休市下互联互通暂停。</span></li><li><a href="https://www.sse.com.cn/disclosure/dealinstruc/closed/c/c_20251127_10795565.shtml">上交所 2026 年休市安排</a><span>用于确认 A 股 5 月 25 日正常交易。</span></li><li><a href="http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/113522/113523/5711128/index.html">中国人民银行：2026 年第一季度货币政策执行报告</a><span>货币政策口径与流动性背景。</span></li><li><a href="https://www.chinamoney.com.cn/chinese/rdqs/20260520/2824103.html">中国人民银行授权全国银行间同业拆借中心公布 2026 年 5 月 20 日 LPR</a><span>LPR 最新水平。</span></li><li><a href="https://www.mofcom.gov.cn/xwfbh/20260520/20260520_163676.html">商务部就稀土出口管制答记者问</a><span>稀土与战略资源政策背景。</span></li><li><a href="http://www.csrc.gov.cn/csrc/c100028/c7602450/content.shtml">证监会：严厉打击非法跨境证券活动</a><span>资本市场监管动态。</span></li><li><a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-First-Quarter-Fiscal-2027/default.aspx">NVIDIA Announces Financial Results</a><span>AI 资本开支与产业链指引。</span></li><li><a href="https://news.lenovo.com/pressroom/press-releases/lenovo-group-full-year-results-fy25-26/">Lenovo Group Full Year Results</a><span>港股科技/终端产业线索。</span></li><li><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve">U.S. Treasury Daily Treasury Par Yield Curve Rates</a><span>跟踪美债利率背景。</span></li></ul>
+      </article>
+    </section>
+
+    <div class="footer">本简报仅用于信息汇总与研究提示，不构成任何投资承诺或个股推荐。文中“事实”基于公开来源；“推断”“建议关注方向”属于情景分析，需自行核验。</div>
+  </main>
+</body>
+</html>

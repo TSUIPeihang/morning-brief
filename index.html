@@ -13,13 +13,11 @@
         "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
       line-height: 1.65;
     }
-
     main {
-      width: min(900px, calc(100% - 40px));
+      width: min(960px, calc(100% - 40px));
       margin: 0 auto;
-      padding: 72px 0;
+      padding: 56px 0;
     }
-
     .hero {
       border: 1px solid #dce4e0;
       border-radius: 8px;
@@ -27,29 +25,25 @@
       box-shadow: 0 16px 36px rgba(15, 32, 28, 0.09);
       overflow: hidden;
     }
-
     img {
       width: 100%;
       aspect-ratio: 16 / 7;
       object-fit: cover;
       display: block;
+      background: #0e3a36;
     }
-
     .content {
       padding: 28px;
     }
-
     h1 {
       margin: 0;
       font-size: 34px;
       line-height: 1.2;
     }
-
     p {
       color: #66736f;
     }
-
-    a {
+    .latest {
       display: inline-flex;
       margin-top: 12px;
       padding: 10px 14px;
@@ -59,16 +53,39 @@
       text-decoration: none;
       font-weight: 700;
     }
+    .archive {
+      display: grid;
+      gap: 12px;
+      margin-top: 22px;
+    }
+    .report {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 14px 16px;
+      border: 1px solid #dce4e0;
+      border-radius: 8px;
+      background: #fff;
+      color: #15201c;
+      text-decoration: none;
+    }
+    .report span {
+      color: #66736f;
+    }
   </style>
 </head>
 <body>
   <main>
     <section class="hero">
-      <img src="assets/morning-brief-2026-05-22-hero.png" alt="晨间财经网页简报">
+      <img src="assets/morning-brief-2026-05-25-hero.svg" alt="晨间财经网页简报">
       <div class="content">
         <h1>晨间财经网页简报</h1>
-        <p>这里会按交易日归档每日财经网页简报。当前样例为 2026-05-22。</p>
-        <a href="2026-05-22/">查看 2026-05-22 报告</a>
+        <p>这里按交易日归档每日财经网页简报。最新报告：2026-05-25。</p>
+        <a class="latest" href="2026-05-25/">查看最新报告</a>
+        <div class="archive">
+        <a class="report" href="2026-05-25/"><strong>2026-05-25</strong><span>晨间财经网页简报</span></a>
+        <a class="report" href="2026-05-22/"><strong>2026-05-22</strong><span>晨间财经网页简报</span></a>
+        </div>
       </div>
     </section>
   </main>
