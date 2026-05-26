@@ -1,38 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#eef8f4"/>
-      <stop offset="100%" stop-color="#d8efe8"/>
-    </linearGradient>
-  </defs>
-  <rect width="1200" height="720" fill="url(#g)"/>
-  <g font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
-    <text x="80" y="92" font-size="50" font-weight="700" fill="#173229">今日资金与市场连接</text>
-    <text x="80" y="142" font-size="26" fill="#48665d">港股恢复、互联互通重启，美股假期后回归，A/H重新挂钩全球利率与AI预期</text>
-  </g>
-  <g>
-    <rect x="80" y="210" width="300" height="370" rx="22" fill="#ffffff" stroke="#bfd8cf"/>
-    <rect x="450" y="210" width="300" height="370" rx="22" fill="#ffffff" stroke="#bfd8cf"/>
-    <rect x="820" y="210" width="300" height="370" rx="22" fill="#ffffff" stroke="#bfd8cf"/>
-  </g>
-  <g font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
-    <text x="120" y="268" font-size="34" font-weight="700" fill="#17352b">A股</text>
-    <text x="120" y="328" font-size="24" fill="#426258">LPR维持不变</text>
-    <text x="120" y="388" font-size="24" fill="#426258">北向资金恢复</text>
-    <text x="120" y="448" font-size="24" fill="#426258">券商/资源/算力博弈</text>
-
-    <text x="490" y="268" font-size="34" font-weight="700" fill="#17352b">港股</text>
-    <text x="490" y="328" font-size="24" fill="#426258">佛诞后复市</text>
-    <text x="490" y="388" font-size="24" fill="#426258">南向资金回流验证</text>
-    <text x="490" y="448" font-size="24" fill="#426258">互联网/金融重定价</text>
-
-    <text x="860" y="268" font-size="34" font-weight="700" fill="#17352b">美股</text>
-    <text x="860" y="328" font-size="24" fill="#426258">今晚恢复交易</text>
-    <text x="860" y="388" font-size="24" fill="#426258">利率与美元仍偏强</text>
-    <text x="860" y="448" font-size="24" fill="#426258">AI资本开支主导情绪</text>
-  </g>
-  <g stroke="#0f7f58" stroke-width="8" fill="none" opacity="0.82">
-    <path d="M364 392 C420 392 430 392 450 392"/>
-    <path d="M735 392 C790 392 800 392 820 392"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-label="三地市场状态图">
+  <rect width="1200" height="720" fill="#f4f7f5"/>
+  <g font-family="Arial, PingFang SC, Microsoft YaHei">
+    <text x="80" y="90" font-size="40" fill="#13221f" font-weight="700">2026-05-26 三地市场状态</text>
+    <rect x="80" y="160" width="290" height="150" rx="24" fill="#0c7a53"/>
+    <rect x="455" y="160" width="290" height="150" rx="24" fill="#133c55"/>
+    <rect x="830" y="160" width="290" height="150" rx="24" fill="#9a5c18"/>
+    <text x="112" y="222" font-size="36" fill="#ffffff" font-weight="700">A股</text>
+    <text x="112" y="272" font-size="28" fill="#dff4eb">正常交易</text>
+    <text x="487" y="222" font-size="36" fill="#ffffff" font-weight="700">港股</text>
+    <text x="487" y="272" font-size="28" fill="#dfebf4">正常交易</text>
+    <text x="862" y="222" font-size="36" fill="#ffffff" font-weight="700">美股</text>
+    <text x="862" y="272" font-size="28" fill="#fff0d7">今晚正常交易</text>
+    <path d="M370 235 H455" stroke="#8aa89a" stroke-width="10"/>
+    <path d="M745 235 H830" stroke="#8aa89a" stroke-width="10"/>
+    <text x="80" y="420" font-size="26" fill="#42544d">使用方式：先看交易状态，再看官方/媒体信源，最后才是建议关注方向。</text>
+    <text x="80" y="474" font-size="26" fill="#42544d">如果三地不同步开市，白天盘面更容易出现“本地资金先定价、晚间海外再校正”的节奏。</text>
   </g>
 </svg>
