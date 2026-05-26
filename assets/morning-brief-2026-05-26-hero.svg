@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#08131f"/>
+      <stop offset="58%" stop-color="#103b46"/>
+      <stop offset="100%" stop-color="#1f7f68"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#8bf4d0" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#f4fff9" stop-opacity="0.92"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g opacity="0.18">
+    <circle cx="1320" cy="190" r="240" fill="#9ee8d2"/>
+    <circle cx="1200" cy="730" r="340" fill="#0f2633"/>
+  </g>
+  <g stroke="#80efca" stroke-opacity="0.30" fill="none">
+    <path d="M0 730 C210 640 360 720 560 600 S940 430 1220 520 S1480 610 1600 530" stroke-width="7"/>
+    <path d="M0 790 C220 700 360 790 570 660 S950 500 1230 570 S1490 650 1600 610" stroke-width="4"/>
+  </g>
+  <g fill="url(#bar)">
+    <rect x="170" y="550" width="94" height="126" rx="10"/>
+    <rect x="305" y="470" width="94" height="206" rx="10"/>
+    <rect x="440" y="410" width="94" height="266" rx="10"/>
+    <rect x="575" y="315" width="94" height="361" rx="10"/>
+    <rect x="710" y="350" width="94" height="326" rx="10"/>
+    <rect x="845" y="235" width="94" height="441" rx="10"/>
+  </g>
+  <g font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#edf9f4">
+    <text x="160" y="174" font-size="42" opacity="0.78">MORNING BRIEF</text>
+    <text x="160" y="262" font-size="92" font-weight="700">港股复市 · 美股今晚回归</text>
+    <text x="160" y="344" font-size="38" opacity="0.88">LPR按兵不动，AI资本开支与监管线索重回定价中心</text>
+    <text x="160" y="786" font-size="34" opacity="0.76">Generated 2026-05-26 08:00 CST</text>
+  </g>
+  <g stroke="#d5fff0" stroke-opacity="0.34">
+    <line x1="1050" y1="210" x2="1460" y2="210"/>
+    <line x1="1050" y1="330" x2="1490" y2="330"/>
+    <line x1="1050" y1="450" x2="1510" y2="450"/>
+    <line x1="1050" y1="570" x2="1460" y2="570"/>
+  </g>
+  <g fill="#effff7" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+    <text x="1050" y="188" font-size="30">A股：正常交易</text>
+    <text x="1050" y="308" font-size="30">港股：恢复交易</text>
+    <text x="1050" y="428" font-size="30">美股：北京时间今晚开市</text>
+    <text x="1050" y="548" font-size="30">焦点：AI算力 / 券商 / 南北向资金</text>
+  </g>
+</svg>
