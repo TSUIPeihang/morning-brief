@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>晨间财经网页简报 2026-05-27</title>
+  <style>
+    :root {
+      --bg: #f3f6f4;
+      --paper: #ffffff;
+      --ink: #13201c;
+      --muted: #62726c;
+      --line: #d8e2dd;
+      --green: #0d7a53;
+      --red: #b6463f;
+      --amber: #a57316;
+      --soft: #f6faf8;
+      --shadow: 0 16px 34px rgba(9, 36, 27, 0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.68;
+    }
+    a { color: var(--green); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    .hero { position: relative; min-height: 540px; display: grid; align-items: end; background: #0d231d; overflow: hidden; }
+    .hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(7, 18, 16, 0.92), rgba(7, 18, 16, 0.54) 58%, rgba(7, 18, 16, 0.20)); }
+    .hero-content { position: relative; z-index: 1; padding: 58px 0 54px; color: #fff; }
+    .eyebrow { display: inline-block; padding: 8px 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.22); background: rgba(255,255,255,0.10); font-size: 13px; letter-spacing: 0.03em; }
+    h1 { margin: 18px 0 0; max-width: 940px; font-size: clamp(34px, 6vw, 66px); line-height: 1.02; }
+    .subtitle { max-width: 860px; margin: 18px 0 0; color: rgba(255,255,255,0.84); font-size: 18px; }
+    .fact-bar { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 28px; }
+    .fact-pill { padding: 14px 16px; border-radius: 8px; background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.16); backdrop-filter: blur(6px); font-size: 14px; }
+    main { padding: 32px 0 56px; }
+    .ticker { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: -68px; position: relative; z-index: 2; }
+    .ticker-card, .card, .source-box, .idea-card, .calendar-card { border: 1px solid var(--line); border-radius: 8px; background: var(--paper); box-shadow: var(--shadow); }
+    .ticker-card { padding: 18px; }
+    .label { color: var(--muted); font-size: 13px; }
+    .value { margin-top: 6px; font-size: 26px; font-weight: 760; }
+    .move { margin-top: 8px; font-size: 14px; font-weight: 700; }
+    .up { color: var(--green); }
+    .down { color: var(--red); }
+    .flat { color: var(--amber); }
+    .section { margin-top: 28px; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 20px; margin-bottom: 12px; }
+    h2 { margin: 0; font-size: 28px; line-height: 1.2; }
+    .note { max-width: 520px; color: var(--muted); font-size: 14px; text-align: right; }
+    .grid-2 { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr); gap: 18px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .card, .source-box, .idea-card, .calendar-card { padding: 22px; }
+    .lead { margin: 0 0 16px; font-size: 18px; color: #284038; }
+    .bullet-list, .source-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 14px; }
+    .bullet-list li { padding-left: 16px; border-left: 3px solid var(--green); }
+    .source-list li { display: grid; gap: 6px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+    .source-list li:last-child { border-bottom: 0; padding-bottom: 0; }
+    .source-list span { color: var(--muted); font-size: 13px; }
+    .image-card { overflow: hidden; padding: 0; }
+    .image-card img { display: block; width: 100%; height: auto; }
+    .image-caption { padding: 16px 18px 18px; font-size: 14px; color: var(--muted); }
+    .idea-card h3, .calendar-card h3 { margin: 0 0 12px; font-size: 21px; }
+    .idea-card p, .calendar-card p { margin: 0 0 10px; }
+    .risk-box { background: linear-gradient(180deg, #fffef7, #fff9ea); border-color: #ecdcb4; }
+    .footer { margin-top: 26px; padding: 18px 22px; border-radius: 8px; border: 1px solid #ecdcb4; background: #fff7df; color: #5a4a23; font-size: 14px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+    .chip { padding: 8px 11px; border-radius: 999px; background: var(--soft); border: 1px solid var(--line); font-size: 13px; color: #234037; }
+    @media (max-width: 900px) {
+      .ticker, .fact-bar, .grid-2, .grid-4, .grid-3 { grid-template-columns: 1fr; }
+      .section-head { display: block; }
+      .note { margin-top: 8px; text-align: left; }
+      .ticker { margin-top: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <img src="../assets/morning-brief-2026-05-27-hero.svg" alt="晨间财经简报主题图">
+    <div class="wrap hero-content">
+      <div class="eyebrow">北京时间 2026-05-27｜有效晨报日｜A股与港股正常交易，美股已完成 2026 年 5 月 26 日美东时段交易</div>
+      <h1>地缘风险反复抬升避险需求，但 AI 与半导体交易仍压过利率回摆的短线扰动</h1>
+      <p class="subtitle">事实层面，A股与港股今天均为正常交易日；美股在美东时间 2026 年 5 月 26 日恢复交易后，标普 500 创收盘新高、纳指续涨，美元与油价受伊朗局势反复支撑。推断层面，今天亚洲盘更像是“地缘风险/油价/美元”与“AI/芯片/资金回流”之间的再平衡，盘面持续性仍取决于量能和晚间美国数据。</p>
+      <div class="fact-bar">
+        <div class="fact-pill">A股正常交易；港股 5 月 25 日佛诞翌日休市后已于 5 月 26 日恢复正常；美股 5 月 25 日阵亡将士纪念日休市后已于 5 月 26 日恢复正常。</div>
+        <div class="fact-pill">隔夜核心变量：Brent 收于 98.58 美元，美元指数 99.16，10 年美债收益率回落至 4.497%。</div>
+        <div class="fact-pill">今天更应区分事实、推断与关注方向：事实偏地缘与监管，交易主线偏 AI、芯片、券商与高股息。</div>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="ticker">
+      <div class="ticker-card">
+        <div class="label">A股</div>
+        <div class="value">正常交易</div>
+        <div class="move up">券商、高股息更稳，成长看量能</div>
+      </div>
+      <div class="ticker-card">
+        <div class="label">港股</div>
+        <div class="value">正常交易</div>
+        <div class="move up">芯片、互联网与南向共振更关键</div>
+      </div>
+      <div class="ticker-card">
+        <div class="label">美股隔夜</div>
+        <div class="value">标普新高</div>
+        <div class="move up">纳指 +1.19%，道指 -0.23%</div>
+      </div>
+      <div class="ticker-card">
+        <div class="label">跨市场驱动</div>
+        <div class="value">油价 / 美元 / AI</div>
+        <div class="move flat">地缘与科技情绪并行</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>全球隔夜 / 最新财经要闻摘要</h2>
+        <div class="note">先看事实，再做交易推断。今天真正决定风险偏好的不是单一 headline，而是油价、美元与长端利率是否重新同向上行。</div>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <p class="lead">事实：</p>
+          <ul class="bullet-list">
+            <li>Reuters 5 月 26 日报道显示，因美国对伊朗再度实施打击、停火预期降温，美元回升，美元指数升至 99.16；Brent 原油上涨 3.58% 收于 98.58 美元/桶；10 年美债收益率回落 7.6 个基点至 4.497%。</li>
+            <li>美股在阵亡将士纪念日后恢复交易，标普 500 于 5 月 26 日创收盘新高，纳指继续上行；半导体板块领涨，Micron 受 AI 需求与目标价上调刺激，市值首次触及 1 万亿美元。</li>
+            <li>美国消费者信心在 5 月有所回落，原因仍与战争背景下的通胀担忧相关；这意味着“风险资产强、居民预期弱”的分化还在。</li>
+            <li>美联储 5 月 22 日确认 Kevin Warsh 就任主席；SEC 5 月 21 日与 NFA 签署监管协调备忘录，说明美国监管层也在同步强化跨市场和衍生品协同监管。</li>
+            <li>美国 5 月 28 日 08:30 ET 将公布 2026 年一季度 GDP 二次估值和 4 月 Personal Income and Outlays；这是今晚与明晚利率预期最关键的前置变量之一。</li>
+          </ul>
+          <div class="chips">
+            <span class="chip">事实：美元与油价同涨</span>
+            <span class="chip">事实：美债收益率短线回落</span>
+            <span class="chip">推断：成长扩估值仍需利率配合</span>
+          </div>
+        </article>
+        <aside class="source-box">
+          <ul class="source-list">
+            <li><a href="https://in.marketscreener.com/news/dollar-climbs-as-us-strikes-on-iran-dent-ceasefire-optimism-ce7f5ad2da8bf627">Reuters：美元、原油与美债在伊朗局势变化下重新定价</a><span>5 月 27 日北京时间凌晨可见的最新跨资产线索。</span></li>
+            <li><a href="https://ca.marketscreener.com/news/s-p-500-hits-record-closing-high-on-ai-optimism-micron-joins-1-trillion-club-ce7f5ad2da8bf32d">Reuters：标普创收盘新高，半导体与 AI 情绪延续</a><span>标普 +0.61%，纳指 +1.19%，道指 -0.23%。</span></li>
+            <li><a href="https://www.marketscreener.com/news/european-stocks-falter-oil-rises-as-us-strikes-iran-ce7f5adddf89fe27">Reuters：2 年期美债收益率回落至 4.051%</a><span>说明资金并未完全转向更高更久，短线仍有博弈空间。</span></li>
+            <li><a href="https://www.federalreserve.gov/newsevents/pressreleases/other20260522a.htm">美联储：Warsh 于 5 月 22 日就任主席</a><span>政策风格与沟通框架处在重新定价期。</span></li>
+            <li><a href="https://www.bea.gov/news/schedule">BEA 发布日程</a><span>5 月 28 日美国 GDP 二修与 4 月 PCE 同时发布。</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>中国 A股重点关注</h2>
+        <div class="note">A股今天是有效晨报日。盘前核心不是会不会开，而是资金更愿意留在券商/高股息，还是重新追向算力、芯片与成长。</div>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <p class="lead">事实：</p>
+          <ul class="bullet-list">
+            <li>证监会 5 月 22 日联合工信部、公安部、人民银行、市场监管总局、金融监管总局、网信办、外汇局发布整治方案，明确用 2 年集中整治非法跨境证券期货基金经营活动；对存量业务原则上只允许单向卖出并转出资金，不允许新增买入与转入资金。</li>
+            <li>同日，证监会对 Tiger Brokers、富途、长桥相关主体在境内非法经营证券业务等行为立案调查并作出行政处罚事先告知，直接强化了境内财富管理、券商经纪和合规渠道的相对优势。</li>
+            <li>国家统计局 5 月 18 日披露，2026 年 1-4 月规模以上工业增加值增长 5.6%，社会消费品零售总额增长 1.9%；4 月中国制造业 PMI 为 50.4%，大型企业 PMI 为 50.2%，经济仍处在弱复苏而非强复苏阶段。</li>
+            <li>国家统计局发布预告显示，5 月 31 日 09:30 将公布 5 月 PMI。月末前，资金会提前交易 5 月经济韧性是否延续的预期差。</li>
+            <li>创业板改革配套规则与上市规则已在 4 月由深交所落地发布，制度方向继续偏向提升新质生产力融资包容度，但短线成交风格仍取决于风险偏好和量能。</li>
+          </ul>
+          <p class="lead">推断：</p>
+          <ul class="bullet-list">
+            <li>监管收紧非法跨境展业，短线更利于 A股本地券商、财富管理和合规交易渠道；如果早盘情绪转暖，金融权重可能先于中小成长发力。</li>
+            <li>若外盘 AI 情绪继续扩散且人民币汇率稳定，算力、先进封装、存储、国产 GPU/EDA、服务器电源与液冷仍是最容易获得增量资金试错的弹性方向。</li>
+            <li>若油价与美元继续走强，则市场更可能回到高股息、资源、防御消费和国企红利，而不是无差别追高成长。</li>
+          </ul>
+        </article>
+        <aside class="source-box">
+          <ul class="source-list">
+            <li><a href="https://www.csrc.gov.cn/csrc/c100028/c7634324/content.shtml">证监会：八部门整治非法跨境经营</a><span>政策影响直接落在券商经纪、跨境开户、资金转移和投资者行为上。</span></li>
+            <li><a href="https://www.csrc.gov.cn/csrc/c100028/c7634330/content.shtml">证监会：查处老虎、富途、长桥</a><span>监管执行强度已从原则表态进入具体执法。</span></li>
+            <li><a href="https://www.stats.gov.cn/">国家统计局：1-4 月经济数据与发布预告</a><span>今天盘中需为 5 月 31 日 PMI 做预期管理。</span></li>
+            <li><a href="https://www.stats.gov.cn/english/PressRelease/202605/t20260506_1963595.html">国家统计局：4 月 PMI</a><span>制造业 PMI 50.4%，大型企业 50.2%，中小企业改善但并不强。</span></li>
+            <li><a href="https://www.szse.cn/aboutus/trends/news/t20260410_619929.html">深交所：深化创业板改革意见解读</a><span>制度上继续偏向科技创新与新质生产力。</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>美股重点关注</h2>
+        <div class="note">美股隔夜已经给出一个很明确的信号：只要收益率不上冲失控，AI 与半导体仍然是全球成长资产的估值锚。</div>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <p class="lead">事实：</p>
+          <ul class="bullet-list">
+            <li>5 月 26 日美股恢复交易后，标普 500 收涨 0.61% 至纪录收盘位，纳指涨 1.19%，道指跌 0.23%。半导体、AI 基础设施与存储最强，Micron 成为隔夜核心情绪放大器之一。</li>
+            <li>Reuters 同日报道，2 年期美债收益率回落至 4.051%，10 年期收益率回落至 4.497%，说明债券端没有继续放大更高更久恐慌，这给成长板块腾出了短线空间。</li>
+            <li>但美国通胀背景仍不轻。BLS 披露 4 月 CPI 同比 3.8%、环比 0.6%；PPI 同比 6.0%、环比 1.4%。油价如果继续高位，将增加 5 月及 6 月通胀粘性的担忧。</li>
+            <li>Warsh 于 5 月 22 日正式担任美联储主席，市场仍在重新适应其政策风格；监管层面，SEC 近期连续推进与 NFA、CFTC 的协同框架，意味着衍生品、加密与跨市场监管都可能继续影响风险偏好。</li>
+          </ul>
+          <p class="lead">今日晚间关注：</p>
+          <ul class="bullet-list">
+            <li>5 月 28 日 08:30 ET 的 GDP 二修与 4 月 PCE。若增长下修、PCE 未明显降温，市场会重新回到增长放慢但通胀偏高的组合定价。</li>
+            <li>Nvidia、Micron、Marvell、Arm 所代表的 AI 基础设施链条能否在高位继续扩散，是今晚亚洲科技股是否能承接的重要验证。</li>
+            <li>美元与 10 年美债收益率是否重新拐头上行，决定纳指能否继续带动全球成长股。</li>
+          </ul>
+        </article>
+        <aside class="source-box">
+          <ul class="source-list">
+            <li><a href="https://ca.marketscreener.com/news/s-p-500-hits-record-closing-high-on-ai-optimism-micron-joins-1-trillion-club-ce7f5ad2da8bf32d">Reuters：标普创新高、Micron 站上 1 万亿美元</a><span>AI 情绪仍在吸走全球科技板块定价权。</span></li>
+            <li><a href="https://www.marketscreener.com/news/european-stocks-falter-oil-rises-as-us-strikes-iran-ce7f5adddf89fe27">Reuters：科技抬升美股，但欧股与油价扰动仍在</a><span>不是单边 risk-on，而是结构性 risk-on。</span></li>
+            <li><a href="https://www.federalreserve.gov/newsevents/pressreleases/other20260522a.htm">联储主席更替</a><span>政策沟通和降息路径仍需再定价。</span></li>
+            <li><a href="https://www.bls.gov/news.release/archives/cpi_05122026.htm">BLS：4 月 CPI 同比 3.8%</a><span>通胀仍高于联储舒适区。</span></li>
+            <li><a href="https://www.bls.gov/news.release/ppi.htm">BLS：4 月 PPI 同比 6.0%</a><span>上游价格压力并未完全消退。</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>港股重点关注</h2>
+        <div class="note">港股今天正常交易。真正要盯的是芯片与互联网能否接过金融、高股息与南向恢复交易后的流动性棒。</div>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <p class="lead">事实：</p>
+          <ul class="bullet-list">
+            <li>HKEX 官方安排显示，香港市场因佛诞翌日于 5 月 25 日休市，5 月 26 日起恢复正常交易；沪深港通相关南向、北向安排也在节假日后恢复。</li>
+            <li>Reuters 5 月 26 日报道称，港股在休市后复盘时，芯片股热度基本对冲了北京整治非法跨境资本活动带来的担忧，港股交易重心明显向半导体与 AI 产业链倾斜。</li>
+            <li>Dow Jones / MarketScreener 报道提到，人工智能相关港股芯片股上涨后，美股半导体盘前接力，说明亚洲科技股已重新成为隔夜美股科技情绪的前导变量之一。</li>
+            <li>港股对美元、油价、南向资金和中概互联网情绪都更敏感，因此它常常是 A股与美股之间最先给出风格答案的市场。</li>
+          </ul>
+          <p class="lead">推断：</p>
+          <ul class="bullet-list">
+            <li>如果南向资金在今天继续偏向互联网、半导体和交易所金融，港股大盘有望维持结构性强势；若南向转守，权重股更可能回到高股息与金融。</li>
+            <li>监管打击非法跨境展业，对香港持牌中资券商、交易所、保险和合规财富管理业务未必是纯利空，反而可能提升合规通道溢价。</li>
+            <li>地产链条仍是港股最大的估值压制器之一。若利率或美元重新走强，地产与高杠杆平台股的修复弹性会最先被压制。</li>
+          </ul>
+        </article>
+        <aside class="source-box">
+          <ul class="source-list">
+            <li><a href="https://www.hkex.com.hk/services/trading/derivatives/overview/trading-calendar-and-holiday-schedule?sc_lang=en">HKEX 交易日历</a><span>5 月 25 日休市，5 月 26 日起恢复正常。</span></li>
+            <li><a href="https://big5.sse.com.cn/site/cht/www.sse.com.cn/services/hkexsc/disclo/announ/c/c_20251222_10802519.shtml">上交所：2026 年港股通交易日安排</a><span>今天属于正常可交易区间。</span></li>
+            <li><a href="https://www.marketscreener.com/news/hong-kong-stocks-rise-as-chipmaking-frenzy-offsets-beijing-capital-control-fears-ce7f5addda81f321">Reuters：港股芯片热度对冲资本管制担忧</a><span>港股对监管加科技双线索最敏感。</span></li>
+            <li><a href="https://www.marketscreener.com/news/u-s-semiconductor-stocks-rise-premarket-after-asia-rally-ce7f5adddf8cf322">Dow Jones：亚洲芯片走强后，美股半导体盘前接力</a><span>香港芯片行情对晚间美股有领先意义。</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>三地市场状态图</h2>
+        <div class="note">邮件版会把图片内嵌；单文件附件离线打开也不会丢图。</div>
+      </div>
+      <div class="grid-2">
+        <article class="card image-card">
+          <img src="../assets/morning-brief-2026-05-27-flows.svg" alt="三地市场状态图">
+          <div class="image-caption">今天的观察顺序不宜颠倒：先看地缘风险和利率，再看南向与内资是否扩散，最后才决定是否追逐高弹性成长。</div>
+        </article>
+        <article class="card risk-box">
+          <p class="lead">今日风险提示与关键日程</p>
+          <ul class="bullet-list">
+            <li>北京时间 09:30 A股开盘；09:30 港股开盘；美股下一交易时段将在北京时间 2026 年 5 月 27 日 21:30 开盘。</li>
+            <li>北京时间今天 09:30，国家统计局将发布工业经济效益月度报告；2026 年 5 月 31 日 09:30 将发布 5 月 PMI 月报。</li>
+            <li>美东时间 2026 年 5 月 28 日 08:30，BEA 将发布一季度 GDP 二次估值与 4 月 PCE；这是本周全球利率与科技股最重要的宏观验证点。</li>
+            <li>地缘风险仍处于 headline 驱动期。若伊朗局势再度恶化，油价、美元和黄金可能先于股票反应。</li>
+            <li>月末调仓与节后资金回补叠加，风格切换可能比单日新闻更快，追高单一主题的回撤风险不低。</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>A股 / 美股 / 港股当日应重点关注的板块</h2>
+        <div class="note">以下是建议关注方向，不是收益承诺。每个方向都同时写出催化与主要风险。</div>
+      </div>
+      <div class="grid-4">
+        <article class="idea-card">
+          <h3>A股｜券商经纪 / 交易所链 / 高股息金融</h3>
+          <p><strong>关注理由：</strong>证监会整治非法跨境展业，合规渠道相对受益；若市场把监管执行解读为资金回流境内，券商与高股息金融更容易先获得确定性溢价。</p>
+          <p><strong>催化因素：</strong>监管后续细则、成交额放大、保险/银行/券商权重协同走强。</p>
+          <p><strong>主要风险：</strong>若投资者解读为风险偏好下降而非回流，板块可能仅有脉冲而非趋势。</p>
+        </article>
+        <article class="idea-card">
+          <h3>A股｜算力 / 半导体 / 先进封装 / 服务器链</h3>
+          <p><strong>关注理由：</strong>隔夜美股 AI 主线继续强化，港股芯片热度已先行；如果人民币与利率平稳，A股高弹性科技最容易跟随扩散。</p>
+          <p><strong>催化因素：</strong>美股半导体继续走强、国产替代催化、龙头成交放量。</p>
+          <p><strong>主要风险：</strong>收益率再上行、油价冲击风险偏好，或板块高位兑现压力过大。</p>
+        </article>
+        <article class="idea-card">
+          <h3>美股｜AI 基建 / 存储 / 云资本开支链</h3>
+          <p><strong>关注理由：</strong>标普创新高与 Micron 破万亿美元说明 AI 仍是核心估值锚；亚洲盘的科技定价最终还要看晚间美股是否接力。</p>
+          <p><strong>催化因素：</strong>PCE 温和、收益率稳定、龙头公司继续上修资本开支与需求预期。</p>
+          <p><strong>主要风险：</strong>通胀回升、收益率反弹、地缘风险推高能源价格后压缩估值。</p>
+        </article>
+        <article class="idea-card">
+          <h3>港股｜互联网平台 / 芯片 / 中资金融 / 高股息央企</h3>
+          <p><strong>关注理由：</strong>港股是今天最敏感的桥梁市场，既吃南向又吃外盘；若芯片和互联网接力，指数弹性会明显强于纯防御结构。</p>
+          <p><strong>催化因素：</strong>南向净流入、恒生科技强于恒指、汇率稳定、芯片链继续领涨。</p>
+          <p><strong>主要风险：</strong>南向转弱、美元走强、地产链拖累指数风险偏好。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>关键日程与行动框架</h2>
+        <div class="note">把注意力放在真正会改变资产定价的节点，不要被单条消息打乱顺序。</div>
+      </div>
+      <div class="grid-3">
+        <article class="calendar-card">
+          <h3>盘前到早盘</h3>
+          <p><strong>先看：</strong>人民币、原油、美元指数是否继续上冲。</p>
+          <p><strong>再看：</strong>A股券商/高股息是否先行，科技是否有量能跟随。</p>
+        </article>
+        <article class="calendar-card">
+          <h3>午盘到港股尾盘</h3>
+          <p><strong>先看：</strong>南向资金是否回流互联网、芯片和交易所金融。</p>
+          <p><strong>再看：</strong>港股是否把芯片强势扩散到平台经济和中概映射。</p>
+        </article>
+        <article class="calendar-card">
+          <h3>晚间到次日凌晨</h3>
+          <p><strong>先看：</strong>美债收益率与美元方向。</p>
+          <p><strong>再看：</strong>美国 GDP 二修与 4 月 PCE 前的风险偏好是否继续支持 AI 扩估值。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>来源链接</h2>
+        <div class="note">以下链接覆盖交易日历、监管、宏观数据与隔夜市场新闻。网页中所有判断均尽量区分事实与推断。</div>
+      </div>
+      <article class="source-box">
+        <ul class="source-list">
+          <li><a href="https://www.nyse.com/trade/hours-calendars?ecid=DIGONTHCGBENWIWM02">NYSE 交易日历</a><span>确认美股 2026 年 5 月 25 日休市、5 月 26 日恢复交易。</span></li>
+          <li><a href="https://www.hkex.com.hk/services/trading/derivatives/overview/trading-calendar-and-holiday-schedule?sc_lang=en">HKEX 交易日历与假期安排</a><span>确认港股 2026 年 5 月 25 日休市、5 月 26 日恢复交易。</span></li>
+          <li><a href="https://big5.sse.com.cn/site/cht/www.sse.com.cn/services/hkexsc/disclo/announ/c/c_20251222_10802519.shtml">上交所 2026 年沪港通下港股通交易日安排</a><span>确认今天属于互联互通正常交易区间。</span></li>
+          <li><a href="https://www.csrc.gov.cn/csrc/c100028/c7634324/content.shtml">证监会：八部门整治非法跨境证券期货基金经营活动</a><span>监管框架已进入具体执行阶段。</span></li>
+          <li><a href="https://www.csrc.gov.cn/csrc/c100028/c7634330/content.shtml">证监会：查处老虎、富途、长桥非法跨境展业</a><span>监管直接影响券商、财富管理与投资者行为预期。</span></li>
+          <li><a href="https://www.stats.gov.cn/">国家统计局：1-4 月国民经济数据与发布预告</a><span>今天盘前宏观背景与周末 PMI 节点来源。</span></li>
+          <li><a href="https://www.stats.gov.cn/xw/tjxw/tzgg/202512/t20251224_1962137.html">国家统计局：2026 年发布日程表</a><span>确认 2026 年 5 月 31 日 PMI 发布时间。</span></li>
+          <li><a href="https://www.stats.gov.cn/english/PressRelease/202605/t20260506_1963595.html">国家统计局：2026 年 4 月中国 PMI</a><span>制造业 PMI 50.4%。</span></li>
+          <li><a href="https://www.federalreserve.gov/newsevents/pressreleases/other20260522a.htm">联储：Kevin Warsh 5 月 22 日就任主席</a><span>政策风格重新定价的重要依据。</span></li>
+          <li><a href="https://www.sec.gov/newsroom/press-releases/2026-47">SEC 与 NFA 协调监管备忘录</a><span>美国监管继续强化跨机构协调。</span></li>
+          <li><a href="https://www.bea.gov/news/schedule">BEA 发布日程：5 月 28 日 GDP 二修与 4 月 PCE</a><span>本周最关键美国数据节点。</span></li>
+          <li><a href="https://www.bls.gov/news.release/archives/cpi_05122026.htm">BLS：4 月 CPI 同比 3.8%</a><span>通胀仍高于联储舒适区。</span></li>
+          <li><a href="https://www.bls.gov/news.release/ppi.htm">BLS：4 月 PPI</a><span>上游价格粘性仍是风险点。</span></li>
+          <li><a href="https://in.marketscreener.com/news/dollar-climbs-as-us-strikes-on-iran-dent-ceasefire-optimism-ce7f5ad2da8bf627">Reuters：美元走强、Brent 收于 98.58 美元、10 年美债至 4.497%</a><span>隔夜跨资产交易主线。</span></li>
+          <li><a href="https://ca.marketscreener.com/news/s-p-500-hits-record-closing-high-on-ai-optimism-micron-joins-1-trillion-club-ce7f5ad2da8bf32d">Reuters：标普创收盘新高，Micron 受 AI 情绪提振</a><span>隔夜美股主线。</span></li>
+          <li><a href="https://www.marketscreener.com/news/european-stocks-falter-oil-rises-as-us-strikes-iran-ce7f5adddf89fe27">Reuters：科技股带动美股，2 年期美债收益率回落</a><span>成长风格得以延续的重要背景。</span></li>
+          <li><a href="https://www.marketscreener.com/news/hong-kong-stocks-rise-as-chipmaking-frenzy-offsets-beijing-capital-control-fears-ce7f5addda81f321">Reuters：港股芯片热度对冲资本管制担忧</a><span>港股今日风格线索。</span></li>
+          <li><a href="https://www.marketscreener.com/news/u-s-semiconductor-stocks-rise-premarket-after-asia-rally-ce7f5adddf8cf322">Dow Jones：亚洲芯片走强后，美股半导体盘前接力</a><span>半导体情绪跨市场传导证据。</span></li>
+        </ul>
+      </article>
+    </section>
+
+    <div class="footer">
+      免责声明：本报告仅用于信息整理与观察清单，不构成任何投资建议、收益承诺或个股推荐。文中“事实”来自公开信源；“推断”是基于公开信息的分析判断；“建议关注方向”仅用于帮助读者组织研究顺序。市场存在政策、流动性、地缘政治、汇率与公司基本面等多重不确定性，请独立判断并自担风险。
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eef8f4"/>
+      <stop offset="100%" stop-color="#d7efe6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#g)"/>
+  <g font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+    <text x="80" y="90" font-size="52" font-weight="700" fill="#153126">今日资金与交易结构</text>
+    <text x="80" y="140" font-size="26" fill="#45645b">北向停摆、南向暂停、美股休市，A股更依赖内资与主题轮动</text>
+  </g>
+  <g>
+    <rect x="80" y="210" width="300" height="360" rx="22" fill="#ffffff" stroke="#bfd8cf"/>
+    <rect x="450" y="210" width="300" height="360" rx="22" fill="#ffffff" stroke="#bfd8cf"/>
+    <rect x="820" y="210" width="300" height="360" rx="22" fill="#ffffff" stroke="#bfd8cf"/>
+  </g>
+  <g font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+    <text x="120" y="270" font-size="34" font-weight="700" fill="#17352b">A股</text>
+    <text x="120" y="330" font-size="24" fill="#426258">内资、两融、量化</text>
+    <text x="120" y="390" font-size="24" fill="#426258">政策交易权重上升</text>
+    <text x="120" y="450" font-size="24" fill="#426258">关注稀土、券商、算力</text>
+
+    <text x="490" y="270" font-size="34" font-weight="700" fill="#17352b">港股</text>
+    <text x="490" y="330" font-size="24" fill="#426258">佛诞休市</text>
+    <text x="490" y="390" font-size="24" fill="#426258">南向资金暂停</text>
+    <text x="490" y="450" font-size="24" fill="#426258">ADR/期货成参照</text>
+
+    <text x="860" y="270" font-size="34" font-weight="700" fill="#17352b">美股</text>
+    <text x="860" y="330" font-size="24" fill="#426258">Memorial Day 休市</text>
+    <text x="860" y="390" font-size="24" fill="#426258">美元、油价主导情绪</text>
+    <text x="860" y="450" font-size="24" fill="#426258">关注本周财报与数据</text>
+  </g>
+  <g stroke="#0f7f58" stroke-width="8" fill="none" opacity="0.8">
+    <path d="M365 390 C420 390 430 390 450 390"/>
+    <path d="M735 390 C790 390 800 390 820 390"/>
+  </g>
+</svg>

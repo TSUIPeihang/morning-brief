@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#081a17"/>
+      <stop offset="55%" stop-color="#0d3a34"/>
+      <stop offset="100%" stop-color="#115b4d"/>
+    </linearGradient>
+    <linearGradient id="line1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffb454" stop-opacity="0.15"/>
+      <stop offset="50%" stop-color="#ffb454" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#ffe0a3" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="line2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7ef0cb" stop-opacity="0.12"/>
+      <stop offset="55%" stop-color="#7ef0cb" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#d9fff1" stop-opacity="0.15"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1100 180) rotate(90) scale(360 520)">
+      <stop stop-color="#9ef0db" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#9ef0db" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <g opacity="0.18">
+    <path d="M0 706C121 669 185 720 286 672C394 621 456 458 604 432C774 402 840 577 1002 554C1127 536 1171 373 1300 355C1390 342 1489 392 1600 382" stroke="#d7fff4" stroke-width="2"/>
+    <path d="M0 610C118 603 162 517 269 521C356 524 425 607 510 592C632 570 710 387 836 384C918 382 974 456 1053 444C1168 427 1190 273 1310 258C1412 245 1502 312 1600 300" stroke="#ffe8af" stroke-width="2"/>
+    <path d="M0 788C137 768 252 818 349 770C487 702 537 501 684 486C847 469 923 690 1084 670C1220 652 1274 458 1418 446C1480 441 1534 463 1600 494" stroke="#7ef0cb" stroke-width="2"/>
+  </g>
+  <g>
+    <polyline points="88,648 248,606 380,628 512,492 660,520 796,384 932,398 1074,290 1218,338 1366,182 1512,212" fill="none" stroke="url(#line1)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <polyline points="76,732 228,752 348,708 492,618 640,630 768,560 920,570 1068,470 1222,490 1376,386 1518,332" fill="none" stroke="url(#line2)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <g fill="#fff3cf">
+      <circle cx="512" cy="492" r="8"/>
+      <circle cx="796" cy="384" r="8"/>
+      <circle cx="1218" cy="338" r="8"/>
+      <circle cx="1366" cy="182" r="10"/>
+    </g>
+    <g fill="#97f4d5">
+      <circle cx="492" cy="618" r="7"/>
+      <circle cx="1068" cy="470" r="7"/>
+      <circle cx="1518" cy="332" r="9"/>
+    </g>
+  </g>
+  <g opacity="0.9">
+    <rect x="110" y="108" width="420" height="196" rx="18" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)"/>
+    <text x="142" y="164" fill="#EFFFFA" font-size="26" font-family="Arial, PingFang SC, Microsoft YaHei">05/27 MORNING BRIEF</text>
+    <text x="142" y="222" fill="#FFFFFF" font-size="72" font-weight="700" font-family="Arial, PingFang SC, Microsoft YaHei">Geopolitics</text>
+    <text x="142" y="272" fill="#FFFFFF" font-size="72" font-weight="700" font-family="Arial, PingFang SC, Microsoft YaHei">Rates · AI</text>
+  </g>
+  <g opacity="0.85">
+    <rect x="1126" y="564" width="328" height="182" rx="18" fill="rgba(8,18,16,0.42)" stroke="rgba(255,255,255,0.16)"/>
+    <text x="1160" y="620" fill="#9EF0DB" font-size="22" font-family="Arial, PingFang SC, Microsoft YaHei">Cross-market drivers</text>
+    <text x="1160" y="668" fill="#FFFFFF" font-size="46" font-weight="700" font-family="Arial, PingFang SC, Microsoft YaHei">Oil / USD</text>
+    <text x="1160" y="716" fill="#FFFFFF" font-size="46" font-weight="700" font-family="Arial, PingFang SC, Microsoft YaHei">Semis / Flows</text>
+  </g>
+</svg>

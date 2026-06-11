@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>晨间财经网页简报 2026-06-11</title>
+  <style>
+    :root {
+      --bg: #f3f6f4;
+      --paper: #ffffff;
+      --ink: #16221f;
+      --muted: #66746f;
+      --line: #d8e2dd;
+      --green: #0d7a53;
+      --red: #b03f37;
+      --gold: #a06d12;
+      --shadow: 0 16px 34px rgba(10, 37, 28, 0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.66;
+    }
+    a { color: var(--green); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    .hero { position: relative; min-height: 520px; display: grid; align-items: end; background: #10251f; overflow: hidden; }
+    .hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(6, 17, 15, 0.90), rgba(6, 17, 15, 0.50) 55%, rgba(6, 17, 15, 0.18)); }
+    .hero-content { position: relative; z-index: 1; padding: 58px 0 56px; color: #fff; }
+    .eyebrow { display: inline-block; padding: 8px 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.28); background: rgba(255,255,255,0.1); font-size: 13px; letter-spacing: 0.03em; }
+    h1 { max-width: 920px; margin: 18px 0 0; font-size: clamp(34px, 6vw, 68px); line-height: 1.02; }
+    .subtitle { max-width: 840px; margin: 18px 0 0; font-size: 18px; color: rgba(255,255,255,0.82); }
+    .fact-bar { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 28px; }
+    .fact-pill { padding: 14px 16px; border-radius: 8px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.16); backdrop-filter: blur(6px); font-size: 14px; }
+    main { padding: 30px 0 54px; }
+    .ticker { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: -68px; position: relative; z-index: 2; }
+    .ticker-card, .card, .source-box, .idea-card { border: 1px solid var(--line); border-radius: 8px; background: var(--paper); box-shadow: var(--shadow); }
+    .ticker-card { padding: 18px; }
+    .label { color: var(--muted); font-size: 13px; }
+    .value { margin-top: 6px; font-size: 26px; font-weight: 760; }
+    .move { margin-top: 8px; font-size: 14px; font-weight: 700; }
+    .up { color: var(--green); }
+    .down { color: var(--red); }
+    .flat { color: var(--gold); }
+    .section { margin-top: 28px; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 20px; margin-bottom: 12px; }
+    h2 { margin: 0; font-size: 28px; line-height: 1.2; }
+    .note { max-width: 480px; color: var(--muted); font-size: 14px; text-align: right; }
+    .grid-2 { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr); gap: 18px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .card, .source-box, .idea-card { padding: 22px; }
+    .lead { margin: 0 0 16px; font-size: 18px; color: #294038; }
+    .bullet-list, .source-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 14px; }
+    .bullet-list li { padding-left: 16px; border-left: 3px solid var(--green); }
+    .source-list li { display: grid; gap: 6px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+    .source-list li:last-child { border-bottom: 0; padding-bottom: 0; }
+    .source-list span { color: var(--muted); font-size: 13px; }
+    .image-card { overflow: hidden; padding: 0; }
+    .image-card img { display: block; width: 100%; height: auto; }
+    .image-caption { padding: 16px 18px 18px; font-size: 14px; color: var(--muted); }
+    .idea-card h3 { margin: 0 0 12px; font-size: 21px; }
+    .idea-card p { margin: 0 0 10px; }
+    .risk-box { background: linear-gradient(180deg, #fffef7, #fff9ea); }
+    .footer { margin-top: 26px; padding: 18px 22px; border-radius: 8px; border: 1px solid #ecdcb4; background: #fff7df; color: #5a4a23; font-size: 14px; }
+    @media (max-width: 900px) {
+      .ticker, .fact-bar, .grid-2, .grid-4 { grid-template-columns: 1fr; }
+      .section-head { display: block; }
+      .note { margin-top: 8px; text-align: left; }
+      .ticker { margin-top: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <img src="../assets/morning-brief-2026-06-11-hero.svg" alt="晨间财经简报主题图">
+    <div class="wrap hero-content">
+      <div class="eyebrow">北京时间 2026-06-11｜有效晨报日｜自动动态生成</div>
+      <h1>全球风险偏好回到 AI 与利率双主线，A/H 与美股同步找锚</h1>
+      <p class="subtitle">A股今天正常交易；港股今天正常交易；美股将在北京时间今晚恢复或维持交易。今天的盘面主导变量仍是全球利率、美元与风险资产估值的再平衡。</p>
+      <div class="fact-bar"><div class="fact-pill">A股：正常交易；港股：正常交易；美股：今晚正常交易。</div><div class="fact-pill">互联互通：恢复</div><div class="fact-pill">新闻密度更偏向 AI、半导体与算力资本开支，成长板块弹性仍高但波动也更大。</div></div>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="ticker">
+<div class="ticker-card">
+  <div class="label">A股</div>
+  <div class="value">正常交易</div>
+  <div class="move up">政策线与成长线并看</div>
+</div>
+<div class="ticker-card">
+  <div class="label">港股</div>
+  <div class="value">正常交易</div>
+  <div class="move up">南向与互联网链重接定价</div>
+</div>
+<div class="ticker-card">
+  <div class="label">美股</div>
+  <div class="value">今晚开市</div>
+  <div class="move up">AI 与利率共振</div>
+</div>
+<div class="ticker-card">
+  <div class="label">主驱动</div>
+  <div class="value">AI / 政策 / 利率</div>
+  <div class="move up">AI 更热</div>
+</div>
+    </section>
+    
+    <section class="section">
+      <div class="section-head">
+        <h2>全球隔夜/最新财经要闻</h2>
+        <div class="note">优先看全球利率、地缘与大宗商品线索</div>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <p class="lead">事实：今年全球IPO融资总额或为近五年最大，地缘政治非企业选择上市地的首要因素。来源：中国基金报｜2026-06-10 14:28 UTC。 黄金恐再跌向4000美元？分析师警告技术面严重破位，但长期牛市逻辑未变。来源：新浪财经｜2026-06-10 09:43 UTC。 一周展望：美国CPI携手两大央行决议，SpaceX IPO重磅来袭-市场参考。来源：金十数据｜2026-06-10 12:46 UTC。</p>
+          <ul class="bullet-list">
+            <li>推断：全球资产更容易围绕利率路径、美元与久期估值展开再平衡，成长板块需要晚间美股继续背书。</li>
+          </ul>
+        </article>
+        <aside class="source-box">
+          <ul class="source-list">
+            <li><a href="https://news.google.com/rss/articles/CBMiekFVX3lxTE1CVjZQa04xNW11d1M1OVlrRUFINjVNTDZ3YW1ubXVDSUhFQ0l1Z25ZRjZFOTR2TGxld3pvYkU0Vjc2NS1vR04xUVMzQlh3RTRwLWNpOGxseWFRdGxhSkhoWVhhRmd2bVR6eEtDOFJZeDBCV1NadjhQTHVR?oc=5">今年全球IPO融资总额或为近五年最大，地缘政治非企业选择上市地的首要因素</a><span>中国基金报｜2026-06-10 14:28 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMi4wJBVV95cUxNcGFJZ3Byc2hZRHR3WTBWS2h4Tzc2cGxnSDU3em9YTkRheWsxd0RwcjI1a3ZDVGJSYWhXaEtIenNCbmp0VllPaDJqblA4bGZydlplVGNPSnNGWXNkM0hHWFNUM1c5Z3RBZWZ6TFJmT2RQQTUzQURDZlBkMEx6dVg1bkNBMURFNFU5SnBtMUtfZENlNmt5WWNYSGhXUXFCcHdVRlhzVHZtX0dBXzRtNXdfSGdtTjhhaFMxckpfSzR3d1Q5bTdNRXpLd21ldlJKYnVqSHFLM1lXMkR5S2NQUGNWUV9yN1BJcVhfbzlPMzBkMndhNC05cXhzTmxaNVlPV3ZUSFFSMW9EeG5uYW5WZ0lCSzVOUHNFaTlwOGt3S1I0ek4zSjlrODJZXzQ1Y3Y2bHR2WWU3RVctM3hDWkJEZ3dBclJlcGF5OXpYYWdaWjd2aEJ3WWZudU5ybTF3SlVZTjh3bmNJ?oc=5">黄金恐再跌向4000美元？分析师警告技术面严重破位，但长期牛市逻辑未变</a><span>新浪财经｜2026-06-10 09:43 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFBUaTdRc2c4a2RJNDExWmFqOGZoS1ZseE9ScVJqdVZzekFRTUprSWRYWmM4ZUFiOXdwejNmMko2LWY3UnJkRU1Fa1JlMjhzM2s?oc=5">一周展望：美国CPI携手两大央行决议，SpaceX IPO重磅来袭-市场参考</a><span>金十数据｜2026-06-10 12:46 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE5VY0F2R0o4cnFQdVFWN0g1ZmE5U3EtMVJCNHZtdEJJVlhHUENxZjZzT3NrWEM3OG1XcTFTSWNTTXI5OEVUTVBzNWE2ekFpNG8zZGNJSHRZeE9YQ0RJX0pKTEZtdnR5UdIBZkFVX3lxTE5VY0F2R0o4cnFQdVFWN0g1ZmE5U3EtMVJCNHZtdEJJVlhHUENxZjZzT3NrWEM3OG1XcTFTSWNTTXI5OEVUTVBzNWE2ekFpNG8zZGNJSHRZeE9YQ0RJX0pKTEZtdnR5UQ?oc=5">央行：維持利率2.25% 若油價持續高企或需加息</a><span>大纪元｜2026-06-10 21:50 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiiAJBVV95cUxPWFNWamZMSTAyUEZLMkJPYVA2ZXJzUEQySjRsM05xSlJSSTdvQUxsS2Q0ckNRT0t6a0IzMjJ6TWh3TUphb1ZQanotbWZIWmZ6ZjVUMjA3UURQdzRneV9pUkVSeDRHV3NVV0R0YUJwOG5rN2w0QkZ0V3VzclZmcWZlSUFOZG5lZVRfejU4U0dveTNQcnNZLU1UQnJhRzFrZFVDMkVYWFBuQW1mN3ZjRkZ1Z0FKazZEQ2Rpc0ZtLS1nTjlWQ2dmYkxGcFlfY1h4Tk96LW9xWTB0N05xWVNsbm9RenhOZnNLSEc2VFBkbDVyZTlXZThRU194Y1ZpWnBLdjR6dE5nRV9wQWs?oc=5">美元/瑞郎走软，交易员权衡美国通胀数据和地缘政治风险</a><span>TMGM｜2026-06-10 20:08 UTC</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    
+    <section class="section">
+      <div class="section-head">
+        <h2>中国 A股重点关注</h2>
+        <div class="note">区分事实、推断和关注方向，避免把主题热度当成确定性</div>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <p class="lead">事实：南方财经全媒体集团。来源：南方财经｜2026-06-10 23:22 UTC。 【早报】证监会召开重磅会议，吴清发声；特朗普警告伊朗“有时候不得不打”。来源：财联社｜2026-06-10 07:20 UTC。 今日数据精选：A股会被“世界杯魔咒”拿捏吗？长三角多地“秋假”安排出炉。来源：上观新闻｜2026-06-10 20:23 UTC。</p>
+          <ul class="bullet-list">
+            <li>推断：如果政策边际没有超预期，A股增量资金仍会优先寻找 AI、算力和国产替代这些高弹性方向。</li>
+          </ul>
+        </article>
+        <aside class="source-box">
+          <ul class="source-list">
+            <li><a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTFB2NzZBZmVnaXJZUEJwZHpKZVpCdHUza012UmtGVGs4T242U0oxem9UQ2hIOXhoX3loQWRVUjhQeU9EZ195OHJWN2ZhOE9IMzVXOU40NG9jUVUzYy1rTG4zNW9SNHV6QQ?oc=5">南方财经全媒体集团</a><span>南方财经｜2026-06-10 23:22 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE9sYUhKNGJwQ1lSN1BwbzBIaGRhbExwajNnMGhfTkV6TFdVbXg1UWd4a1k5cWMtYklmMGItc1BaenFmZkMwYzNfRg?oc=5">【早报】证监会召开重磅会议，吴清发声；特朗普警告伊朗“有时候不得不打”</a><span>财联社｜2026-06-10 07:20 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE5mcHlqM040OUF5TTE2YUlyRF90WEpEQ25WR2pta1hsM2EwRXd6WlcydVZpelNBdU5OU2JHelVxbEZ5bTN3YzFMM2N0TmFVcUItZFAzSkNDbjhyUQ?oc=5">今日数据精选：A股会被“世界杯魔咒”拿捏吗？长三角多地“秋假”安排出炉</a><span>上观新闻｜2026-06-10 20:23 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE5YZTZ0OVRMNGRWWkJNX00tdk9TQm1JRkZua0gwLWxiMmVSbEIyQ2wxRG9UazBtdC1vaTRDVUJHbjVURXpHNURKeURmaFFQLUw4T3NzODdQcmJaZ1pQZm9jSnJ1U1BnZw?oc=5">美军袭击伊朗多个目标，伊方：将强力回应；纳指跌近2%，金价跌超4%；特斯拉FSD中国山区挂壁公路实测爆火；豆包专业版开放灰度测试丨每经早参</a><span>每日经济新闻｜2026-06-10 22:01 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTFBzclNTT08wdkM4blZQUWw4MGlEQ3Zmel9WMDBUN0F4WDNzeXlndFVwSW5BZHVlQlc1cnJjZ0dvUFowQXM3TGU3aHJxZUtXWFg4T3RxbUln?oc=5">宇瞳光学(300790):浙商证券股份有限公司关于东莞市宇瞳光学科技股份有限公司2025年度向特定对象发行A股股票之上市保荐书- CFi.CN 中财网</a><span>中财网｜2026-06-10 11:35 UTC</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    
+    <section class="section">
+      <div class="section-head">
+        <h2>美股重点关注</h2>
+        <div class="note">晚间主要盯美债、科技龙头与监管口径</div>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <p class="lead">事实：SEC Establishes Joint Data Standards as Required Under the Financial Data Transparency Act of 2022。来源：SEC｜2026-06-08 10:36 UTC。 SEC Announces New Members of Small Business Capital Formation Advisory Committee。来源：SEC｜2026-06-04 14:39 UTC。 SEC Publishes Draft Strategic Plan for Public Comment。来源：SEC｜2026-06-02 10:30 UTC。</p>
+          <ul class="bullet-list">
+            <li>推断：监管口径更密集时，高估值科技和金融基础设施板块都要提高对合规与披露风险的折价。</li>
+          </ul>
+        </article>
+        <aside class="source-box">
+          <ul class="source-list">
+            <li><a href="https://www.sec.gov/newsroom/press-releases/2026-53-sec-establishes-joint-data-standards-required-under-financial-data-transparency-act-2022">SEC Establishes Joint Data Standards as Required Under the Financial Data Transparency Act of 2022</a><span>SEC｜2026-06-08 10:36 UTC</span></li>
+<li><a href="https://www.sec.gov/newsroom/press-releases/2026-52-sec-announces-new-members-small-business-capital-formation-advisory-committee">SEC Announces New Members of Small Business Capital Formation Advisory Committee</a><span>SEC｜2026-06-04 14:39 UTC</span></li>
+<li><a href="https://www.sec.gov/newsroom/press-releases/2026-51-sec-publishes-draft-strategic-plan-public-comment">SEC Publishes Draft Strategic Plan for Public Comment</a><span>SEC｜2026-06-02 10:30 UTC</span></li>
+<li><a href="https://www.sec.gov/newsroom/press-releases/2026-50-sec-announces-four-new-members-investor-advisory-committee">SEC Announces Four New Members of Investor Advisory Committee</a><span>SEC｜2026-06-01 12:39 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE5kRlBCSWdjTlBNZmhTRk5IdmI3aVJYN2ZWSGJxSGpuVlFONWFGYXJoZ19oVDdLOHBEOVpXd21xNnkxb1FTcU9Wcw?oc=5">当半导体成“震中”！一文读懂：美股投资者当前在哪里避险？</a><span>财联社｜2026-06-10 03:06 UTC</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    
+    <section class="section">
+      <div class="section-head">
+        <h2>港股重点关注</h2>
+        <div class="note">互联网、金融、地产与南向资金是港股弹性的主分母</div>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <p class="lead">事实：HKEX Enhances Central Asia Market Connectivity with AIFC, Astana International Exchange MOUs。来源：HKEX｜2026-06-02 10:22 UTC。</p>
+          <ul class="bullet-list">
+            <li>推断：若政策线更强，港股金融与高股息会先接到配置盘，再看互联网是否接力。</li>
+          </ul>
+        </article>
+        <aside class="source-box">
+          <ul class="source-list">
+            <li><a href="https://www.hkex.com.hk/News/News-Release/2026/260602news?sc_lang=en">HKEX Enhances Central Asia Market Connectivity with AIFC, Astana International Exchange MOUs</a><span>HKEX｜2026-06-02 10:22 UTC</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>三地市场状态图</h2>
+        <div class="note">邮件版会把图片内嵌，附件打开不会丢图</div>
+      </div>
+      <div class="grid-2">
+        <article class="card image-card">
+          <img src="../assets/morning-brief-2026-06-11-flows.svg" alt="三地市场状态图">
+          <div class="image-caption">先看开休市与互联互通，再看新闻流，最后才是板块方向，这样更容易避免把波动误读成趋势。</div>
+        </article>
+        <article class="card risk-box">
+          <p class="lead">今日风险提示与关键日程</p>
+          <ul class="bullet-list">
+            <li>A股：09:30 开盘；港股：09:30 开盘；美股：北京时间 21:30 开盘。</li>
+<li>若 A股与港股同时开市，盘中要同步观察北向/南向是否恢复成交，以判断上午的风格是否具备持续性。</li>
+<li>盘后继续盯央行、监管和交易所官方披露；若官方口径突然变化，早盘主线可能会在午后切换。</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section-head">
+        <h2>A股 / 美股 / 港股应重点关注的板块</h2>
+        <div class="note">这部分是关注方向，不是收益承诺；强制同时写出催化和风险。</div>
+      </div>
+      <div class="grid-4">
+        <article class="idea-card">
+  <h3>A股｜算力链 / 半导体 / 国产替代</h3>
+  <p><strong>关注理由：</strong>新闻流里如果 AI、芯片和大模型更密集，增量资金更愿意追逐高弹性成长；如果政策与监管口径更强，金融和制度受益链条更容易先被定价。</p>
+  <p><strong>催化因素：</strong>政策口径、成交额放大、核心龙头指引或海外科技股晚间反馈。</p>
+  <p><strong>主要风险：</strong>高位波动、估值消化不足，或北向/情绪没有同步放大。</p>
+</article>
+<article class="idea-card">
+  <h3>A股｜黄金 / 能源 / 资源品</h3>
+  <p><strong>关注理由：</strong>如果宏观稳增长与消费修复相关表述增多，内需链更适合看边际改善；若地缘、关税和能源新闻更密，资源对冲属性会更突出。</p>
+  <p><strong>催化因素：</strong>宏观政策增量、商品价格变化、地缘与贸易事件的边际升级或缓和。</p>
+  <p><strong>主要风险：</strong>价格传导慢、需求验证不足，或单纯主题化导致追高回撤。</p>
+</article>
+<article class="idea-card">
+  <h3>美股｜AI 基础设施 / 云 / 半导体</h3>
+  <p><strong>关注理由：</strong>美股仍是全球成长资产的估值锚，AI 龙头的资本开支、订单与监管口径会直接影响亚洲成长链的溢价。</p>
+  <p><strong>催化因素：</strong>Fed/SEC 更新、科技龙头新闻、10Y 美债收益率与纳指期货方向。</p>
+  <p><strong>主要风险：</strong>收益率上行压估值、监管强化或龙头业绩/指引不及预期。</p>
+</article>
+<article class="idea-card">
+  <h3>港股｜互联网平台 / 中概映射 / 交易所金融</h3>
+  <p><strong>关注理由：</strong>港股对海外情绪更敏感，平台经济和南向资金往往一起决定指数弹性；若政策线更强，高股息金融也容易成为避震仓位。</p>
+  <p><strong>催化因素：</strong>南向资金恢复、平台公司新闻、港交所披露与人民币汇率。</p>
+  <p><strong>主要风险：</strong>南向回流弱于预期、美元走强压制估值，或地产链拖累指数风险偏好。</p>
+</article>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section-head">
+        <h2>来源链接</h2>
+        <div class="note">优先展示已抓取到的公开官方/媒体信源；抓不到时保留空位，下次自动刷新。</div>
+      </div>
+      <div class="grid-2">
+        <article class="source-box">
+          <ul class="source-list">
+            <li><a href="https://news.google.com/rss/articles/CBMiekFVX3lxTE1CVjZQa04xNW11d1M1OVlrRUFINjVNTDZ3YW1ubXVDSUhFQ0l1Z25ZRjZFOTR2TGxld3pvYkU0Vjc2NS1vR04xUVMzQlh3RTRwLWNpOGxseWFRdGxhSkhoWVhhRmd2bVR6eEtDOFJZeDBCV1NadjhQTHVR?oc=5">今年全球IPO融资总额或为近五年最大，地缘政治非企业选择上市地的首要因素</a><span>中国基金报｜2026-06-10 14:28 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMi4wJBVV95cUxNcGFJZ3Byc2hZRHR3WTBWS2h4Tzc2cGxnSDU3em9YTkRheWsxd0RwcjI1a3ZDVGJSYWhXaEtIenNCbmp0VllPaDJqblA4bGZydlplVGNPSnNGWXNkM0hHWFNUM1c5Z3RBZWZ6TFJmT2RQQTUzQURDZlBkMEx6dVg1bkNBMURFNFU5SnBtMUtfZENlNmt5WWNYSGhXUXFCcHdVRlhzVHZtX0dBXzRtNXdfSGdtTjhhaFMxckpfSzR3d1Q5bTdNRXpLd21ldlJKYnVqSHFLM1lXMkR5S2NQUGNWUV9yN1BJcVhfbzlPMzBkMndhNC05cXhzTmxaNVlPV3ZUSFFSMW9EeG5uYW5WZ0lCSzVOUHNFaTlwOGt3S1I0ek4zSjlrODJZXzQ1Y3Y2bHR2WWU3RVctM3hDWkJEZ3dBclJlcGF5OXpYYWdaWjd2aEJ3WWZudU5ybTF3SlVZTjh3bmNJ?oc=5">黄金恐再跌向4000美元？分析师警告技术面严重破位，但长期牛市逻辑未变</a><span>新浪财经｜2026-06-10 09:43 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFBUaTdRc2c4a2RJNDExWmFqOGZoS1ZseE9ScVJqdVZzekFRTUprSWRYWmM4ZUFiOXdwejNmMko2LWY3UnJkRU1Fa1JlMjhzM2s?oc=5">一周展望：美国CPI携手两大央行决议，SpaceX IPO重磅来袭-市场参考</a><span>金十数据｜2026-06-10 12:46 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE5VY0F2R0o4cnFQdVFWN0g1ZmE5U3EtMVJCNHZtdEJJVlhHUENxZjZzT3NrWEM3OG1XcTFTSWNTTXI5OEVUTVBzNWE2ekFpNG8zZGNJSHRZeE9YQ0RJX0pKTEZtdnR5UdIBZkFVX3lxTE5VY0F2R0o4cnFQdVFWN0g1ZmE5U3EtMVJCNHZtdEJJVlhHUENxZjZzT3NrWEM3OG1XcTFTSWNTTXI5OEVUTVBzNWE2ekFpNG8zZGNJSHRZeE9YQ0RJX0pKTEZtdnR5UQ?oc=5">央行：維持利率2.25% 若油價持續高企或需加息</a><span>大纪元｜2026-06-10 21:50 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiiAJBVV95cUxPWFNWamZMSTAyUEZLMkJPYVA2ZXJzUEQySjRsM05xSlJSSTdvQUxsS2Q0ckNRT0t6a0IzMjJ6TWh3TUphb1ZQanotbWZIWmZ6ZjVUMjA3UURQdzRneV9pUkVSeDRHV3NVV0R0YUJwOG5rN2w0QkZ0V3VzclZmcWZlSUFOZG5lZVRfejU4U0dveTNQcnNZLU1UQnJhRzFrZFVDMkVYWFBuQW1mN3ZjRkZ1Z0FKazZEQ2Rpc0ZtLS1nTjlWQ2dmYkxGcFlfY1h4Tk96LW9xWTB0N05xWVNsbm9RenhOZnNLSEc2VFBkbDVyZTlXZThRU194Y1ZpWnBLdjR6dE5nRV9wQWs?oc=5">美元/瑞郎走软，交易员权衡美国通胀数据和地缘政治风险</a><span>TMGM｜2026-06-10 20:08 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE1zekhqTGhlZGZIR0FlZ0VHMGxsWHgzSWl5ZkVtNl9Nc21hRVFkY1pnOGZmRFpzcWl5M0JocVB3UG52SEFtV2R4ZjRDVF9GanJZVExpbjlYNDdGQjJ4RkprZVl6NGZtM1U5SkNwMA?oc=5">黄金狂泻188美元、白银大跌近3%！“避险资产”集体失灵 投行警告金价或再跌20%</a><span>FX168财经｜2026-06-10 21:10 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTFB2NzZBZmVnaXJZUEJwZHpKZVpCdHUza012UmtGVGs4T242U0oxem9UQ2hIOXhoX3loQWRVUjhQeU9EZ195OHJWN2ZhOE9IMzVXOU40NG9jUVUzYy1rTG4zNW9SNHV6QQ?oc=5">南方财经全媒体集团</a><span>南方财经｜2026-06-10 23:22 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE9sYUhKNGJwQ1lSN1BwbzBIaGRhbExwajNnMGhfTkV6TFdVbXg1UWd4a1k5cWMtYklmMGItc1BaenFmZkMwYzNfRg?oc=5">【早报】证监会召开重磅会议，吴清发声；特朗普警告伊朗“有时候不得不打”</a><span>财联社｜2026-06-10 07:20 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE5mcHlqM040OUF5TTE2YUlyRF90WEpEQ25WR2pta1hsM2EwRXd6WlcydVZpelNBdU5OU2JHelVxbEZ5bTN3YzFMM2N0TmFVcUItZFAzSkNDbjhyUQ?oc=5">今日数据精选：A股会被“世界杯魔咒”拿捏吗？长三角多地“秋假”安排出炉</a><span>上观新闻｜2026-06-10 20:23 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE5YZTZ0OVRMNGRWWkJNX00tdk9TQm1JRkZua0gwLWxiMmVSbEIyQ2wxRG9UazBtdC1vaTRDVUJHbjVURXpHNURKeURmaFFQLUw4T3NzODdQcmJaZ1pQZm9jSnJ1U1BnZw?oc=5">美军袭击伊朗多个目标，伊方：将强力回应；纳指跌近2%，金价跌超4%；特斯拉FSD中国山区挂壁公路实测爆火；豆包专业版开放灰度测试丨每经早参</a><span>每日经济新闻｜2026-06-10 22:01 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTFBzclNTT08wdkM4blZQUWw4MGlEQ3Zmel9WMDBUN0F4WDNzeXlndFVwSW5BZHVlQlc1cnJjZ0dvUFowQXM3TGU3aHJxZUtXWFg4T3RxbUln?oc=5">宇瞳光学(300790):浙商证券股份有限公司关于东莞市宇瞳光学科技股份有限公司2025年度向特定对象发行A股股票之上市保荐书- CFi.CN 中财网</a><span>中财网｜2026-06-10 11:35 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOM0RYSEtCZldkRTR4WVpFUVVweGNaUWxHd0NnZGtOaXpXVVR5TnA2TkY3ejZieVJRWFFjUW1KZTkzR3NRTkoyTDJDaDFDYnBiSzF1cUZZT2JQa2FTNVd5U2RXQ09JbUs1WWNyVWZHbHNCN29XUzcwRFA2enpSbWhQNGlrc2dZRmln?oc=5">A股头条：一篇研报导致光通信概念重挫？知名机构唱衰CPO！美国5月CPI同比增长4.2%，市场押注美联储继续观望</a><span>搜狐网｜2026-06-10 23:42 UTC</span></li>
+<li><a href="https://www.sec.gov/newsroom/press-releases/2026-53-sec-establishes-joint-data-standards-required-under-financial-data-transparency-act-2022">SEC Establishes Joint Data Standards as Required Under the Financial Data Transparency Act of 2022</a><span>SEC｜2026-06-08 10:36 UTC</span></li>
+<li><a href="https://www.sec.gov/newsroom/press-releases/2026-52-sec-announces-new-members-small-business-capital-formation-advisory-committee">SEC Announces New Members of Small Business Capital Formation Advisory Committee</a><span>SEC｜2026-06-04 14:39 UTC</span></li>
+          </ul>
+        </article>
+        <article class="card">
+          <p class="lead">免责声明</p>
+          <ul class="bullet-list">
+            <li>事实：本文引用公开信源与交易所/监管机构 RSS 或新闻聚合结果，具体原文以链接跳转页面为准。</li>
+            <li>推断：文内对政策、行业、资金与风格的描述属于信息整理后的研究判断，不构成收益承诺或个股推荐。</li>
+            <li>关注方向：仅用于帮助早盘排序“先看什么、为什么看、主要风险在哪”，不能替代独立研究与风控。</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+    <div class="footer">生成说明：本页由自动化脚本按日期、市场开休市状态和公开信源动态生成；如遇主要市场休市，仍保留假期/风险日历版页面。邮件版会将 SVG 图片内嵌为 data URL，保证离线打开不丢图。</div>
+  </main>
+</body>
+</html>

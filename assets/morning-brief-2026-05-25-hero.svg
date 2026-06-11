@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07141f"/>
+      <stop offset="55%" stop-color="#0e3a36"/>
+      <stop offset="100%" stop-color="#1e6d60"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#5ef0b2" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#d8fff0" stop-opacity="0.85"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g opacity="0.18">
+    <circle cx="1360" cy="180" r="230" fill="#9de4cf"/>
+    <circle cx="1240" cy="700" r="320" fill="#0d2230"/>
+  </g>
+  <g stroke="#7de7c4" stroke-opacity="0.34" fill="none">
+    <path d="M0 700 C240 610 410 720 620 590 S980 420 1260 500 S1500 560 1600 500" stroke-width="8"/>
+    <path d="M0 780 C240 690 420 790 630 660 S970 490 1240 560 S1480 620 1600 570" stroke-width="4"/>
+  </g>
+  <g fill="url(#bar)">
+    <rect x="170" y="510" width="92" height="170" rx="10"/>
+    <rect x="300" y="450" width="92" height="230" rx="10"/>
+    <rect x="430" y="380" width="92" height="300" rx="10"/>
+    <rect x="560" y="290" width="92" height="390" rx="10"/>
+    <rect x="690" y="335" width="92" height="345" rx="10"/>
+    <rect x="820" y="240" width="92" height="440" rx="10"/>
+  </g>
+  <g font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#edf8f4">
+    <text x="160" y="180" font-size="42" opacity="0.75">MORNING BRIEF</text>
+    <text x="160" y="270" font-size="96" font-weight="700">A股开市 · 港美休市</text>
+    <text x="160" y="350" font-size="40" opacity="0.88">政策、流动性与地缘风险重新定价</text>
+    <text x="160" y="780" font-size="34" opacity="0.75">Generated 2026-05-25 08:00 CST</text>
+  </g>
+  <g stroke="#cffff1" stroke-opacity="0.34">
+    <line x1="1040" y1="210" x2="1410" y2="210"/>
+    <line x1="1040" y1="330" x2="1460" y2="330"/>
+    <line x1="1040" y1="450" x2="1510" y2="450"/>
+    <line x1="1040" y1="570" x2="1450" y2="570"/>
+  </g>
+  <g fill="#e6fff6" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+    <text x="1040" y="188" font-size="30">A股：正常交易</text>
+    <text x="1040" y="308" font-size="30">港股：佛诞休市</text>
+    <text x="1040" y="428" font-size="30">美股：Memorial Day</text>
+    <text x="1040" y="548" font-size="30">焦点：政策与产业链</text>
+  </g>
+</svg>

@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>晨间财经网页简报 2026-06-10</title>
+  <style>
+    :root {
+      --bg: #f3f6f4;
+      --paper: #ffffff;
+      --ink: #16221f;
+      --muted: #66746f;
+      --line: #d8e2dd;
+      --green: #0d7a53;
+      --red: #b03f37;
+      --gold: #a06d12;
+      --shadow: 0 16px 34px rgba(10, 37, 28, 0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.66;
+    }
+    a { color: var(--green); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    .hero { position: relative; min-height: 520px; display: grid; align-items: end; background: #10251f; overflow: hidden; }
+    .hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(6, 17, 15, 0.90), rgba(6, 17, 15, 0.50) 55%, rgba(6, 17, 15, 0.18)); }
+    .hero-content { position: relative; z-index: 1; padding: 58px 0 56px; color: #fff; }
+    .eyebrow { display: inline-block; padding: 8px 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.28); background: rgba(255,255,255,0.1); font-size: 13px; letter-spacing: 0.03em; }
+    h1 { max-width: 920px; margin: 18px 0 0; font-size: clamp(34px, 6vw, 68px); line-height: 1.02; }
+    .subtitle { max-width: 840px; margin: 18px 0 0; font-size: 18px; color: rgba(255,255,255,0.82); }
+    .fact-bar { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 28px; }
+    .fact-pill { padding: 14px 16px; border-radius: 8px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.16); backdrop-filter: blur(6px); font-size: 14px; }
+    main { padding: 30px 0 54px; }
+    .ticker { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: -68px; position: relative; z-index: 2; }
+    .ticker-card, .card, .source-box, .idea-card { border: 1px solid var(--line); border-radius: 8px; background: var(--paper); box-shadow: var(--shadow); }
+    .ticker-card { padding: 18px; }
+    .label { color: var(--muted); font-size: 13px; }
+    .value { margin-top: 6px; font-size: 26px; font-weight: 760; }
+    .move { margin-top: 8px; font-size: 14px; font-weight: 700; }
+    .up { color: var(--green); }
+    .down { color: var(--red); }
+    .flat { color: var(--gold); }
+    .section { margin-top: 28px; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 20px; margin-bottom: 12px; }
+    h2 { margin: 0; font-size: 28px; line-height: 1.2; }
+    .note { max-width: 480px; color: var(--muted); font-size: 14px; text-align: right; }
+    .grid-2 { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr); gap: 18px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .card, .source-box, .idea-card { padding: 22px; }
+    .lead { margin: 0 0 16px; font-size: 18px; color: #294038; }
+    .bullet-list, .source-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 14px; }
+    .bullet-list li { padding-left: 16px; border-left: 3px solid var(--green); }
+    .source-list li { display: grid; gap: 6px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+    .source-list li:last-child { border-bottom: 0; padding-bottom: 0; }
+    .source-list span { color: var(--muted); font-size: 13px; }
+    .image-card { overflow: hidden; padding: 0; }
+    .image-card img { display: block; width: 100%; height: auto; }
+    .image-caption { padding: 16px 18px 18px; font-size: 14px; color: var(--muted); }
+    .idea-card h3 { margin: 0 0 12px; font-size: 21px; }
+    .idea-card p { margin: 0 0 10px; }
+    .risk-box { background: linear-gradient(180deg, #fffef7, #fff9ea); }
+    .footer { margin-top: 26px; padding: 18px 22px; border-radius: 8px; border: 1px solid #ecdcb4; background: #fff7df; color: #5a4a23; font-size: 14px; }
+    @media (max-width: 900px) {
+      .ticker, .fact-bar, .grid-2, .grid-4 { grid-template-columns: 1fr; }
+      .section-head { display: block; }
+      .note { margin-top: 8px; text-align: left; }
+      .ticker { margin-top: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <img src="../assets/morning-brief-2026-06-10-hero.svg" alt="晨间财经简报主题图">
+    <div class="wrap hero-content">
+      <div class="eyebrow">北京时间 2026-06-10｜有效晨报日｜自动动态生成</div>
+      <h1>全球风险偏好回到 AI 与利率双主线，A/H 与美股同步找锚</h1>
+      <p class="subtitle">A股今天正常交易；港股今天正常交易；美股将在北京时间今晚恢复或维持交易。今天的盘面主导变量集中在 AI 资本开支、半导体链与成长风格再定价。</p>
+      <div class="fact-bar"><div class="fact-pill">A股：正常交易；港股：正常交易；美股：今晚正常交易。</div><div class="fact-pill">互联互通：恢复</div><div class="fact-pill">新闻密度更偏向 AI、半导体与算力资本开支，成长板块弹性仍高但波动也更大。</div></div>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="ticker">
+<div class="ticker-card">
+  <div class="label">A股</div>
+  <div class="value">正常交易</div>
+  <div class="move up">政策线与成长线并看</div>
+</div>
+<div class="ticker-card">
+  <div class="label">港股</div>
+  <div class="value">正常交易</div>
+  <div class="move up">南向与互联网链重接定价</div>
+</div>
+<div class="ticker-card">
+  <div class="label">美股</div>
+  <div class="value">今晚开市</div>
+  <div class="move up">AI 与利率共振</div>
+</div>
+<div class="ticker-card">
+  <div class="label">主驱动</div>
+  <div class="value">AI / 政策 / 利率</div>
+  <div class="move up">AI 更热</div>
+</div>
+    </section>
+    
+    <section class="section">
+      <div class="section-head">
+        <h2>全球隔夜/最新财经要闻</h2>
+        <div class="note">优先看全球利率、地缘与大宗商品线索</div>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <p class="lead">事实：黄金恐再跌向4000美元？分析师警告技术面严重破位，但长期牛市逻辑未变。来源：新浪财经｜2026-06-09 17:39 UTC。 富达国际:股市波动再现 高利率及通胀可控料债市迎来收益布局时机。来源：AASTOCKS.com｜2026-06-08 04:51 UTC。 特朗普与伊朗双双释放缓和信号！油价狂飙后回落，美股大涨、美元守住100、比特币突破6.4万美元。来源：FX168财经｜2026-06-08 18:59 UTC。</p>
+          <ul class="bullet-list">
+            <li>推断：全球风险偏好没有完全脱离政策与产业双线博弈，事件驱动会比单纯 beta 更重要。</li>
+          </ul>
+        </article>
+        <aside class="source-box">
+          <ul class="source-list">
+            <li><a href="https://news.google.com/rss/articles/CBMi1gRBVV95cUxObFZkbVBIa09ma1drcG8weFpuR1Q2dEFNQ0NtcTZja2NrQXhsV1hTWW5JdTZ2WGpaMWE2LWREbWZjcWpESFdBS3U0N1NMUGxSUWRPVHFVS05SUXdTSXdUQUV4UWFQR1l1ajZJMmo4WUdnbENWWVpvR2haNXZ0anVqMGVHeVUyQ3N0eVI1d21DYU9XZDY1MWtlOHBJUElPYk12RWkwS3ZxR21zVTRFd0RDQjNZaXlRZVljaHpTLVpHOGZISkRoci0zaV80SUMyQ1Fyd01mLVdyTnNJQnlLa3BuNUdoTnFtZE5wVzJ3V1hvU2ZUcnliVzh2c2NEVnplVHBqc3B3YUQ1dnYxYk9vUkFfa1Z1NWR3d2xBd3luSUxsbmVmR0V2ODlyUllEU1JYWUxDbmcxckwzWTZUVWk1QXgtXzVVc2hNU3JtOHlydDdLak5GcjZHZmdoOEhjRGd3VE9YQWNvWmlvcXIxSnN4QlNsX2gyMlFHSWZFcVM1cWlranVHUW1yQWJBYUd4Z2c5Wlk0b1hhakNoamt2eUxtV09Fd05qTnBhZG01VzZ0eTNYWGQ4NjNXUkNCTVpBRE9ab2UtVGt4QjRGMG5IcE85eFRfYU1hVmxUM1pWN1hBWU80Rlc2aFNIVUhYUnBxSGo0Q1cyUkEtazRXWTZKSk5Qd3B0bk9fRTY4YzNlZkxFaEpxblBKRDdRU0xYaU5ZeC1qV2RvdTNfYnVhdHZWMnVld0N6VDF0S2JEUWFKako2UWtJZ2pTUnNKMTd1YmVGLWhvMFdvYThvLWxR?oc=5">黄金恐再跌向4000美元？分析师警告技术面严重破位，但长期牛市逻辑未变</a><span>新浪财经｜2026-06-09 17:39 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTFByTElvVTNUZFN2NUdGTUpXZkdBV1RGbGp1RDlLMk80ZmpCUGJ0ME00THpSb3lZNllYV1ZfRG9ma2k1d2lJak5ZZGtYWlpCeWlVc0U5bzVUSmk1UUhEZmtJWjB2RmYwYi1wYUY1ZnFYbVhRUQ?oc=5">富达国际:股市波动再现 高利率及通胀可控料债市迎来收益布局时机</a><span>AASTOCKS.com｜2026-06-08 04:51 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE5fWThjOHFKZUlDZE1nczFwdmh5Q1E1YWtqQkg3YWwydTg5b1hxSXAzdnA1b3NvX0RxVmYwcXBuUGVRbWxXLS1UbkJLYmpFR19FeDdqbnBsdFp3WlNGZGdkUmxRdFJpazN5TXhESElYS3ZSMUhLcFhzTQ?oc=5">特朗普与伊朗双双释放缓和信号！油价狂飙后回落，美股大涨、美元守住100、比特币突破6.4万美元</a><span>FX168财经｜2026-06-08 18:59 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMi8AFBVV95cUxNYlJKcy1tT2ZTUWN6YzMzT1JrekpXVTJsQWNNOFNNN1UzVzg4WVE5MG85OWNVcGNZWk9vbVhuWW9tY0dnN3hZT1A5NXhHRzdnN2t2SW5jcVZPZzloQnlVXzdDZlVqVURPNXktaEUtN1ZMc0ltT1ZJUF85UW1STkIxaGI4Nm9qRW1VUWhXQUxDUXFTY2NYTjhPUW1DVmFsR1hLTTlCOU1XRjhNZGdINzZMTVRfcU5CQ1JldnNZc1REMkFheWxkRjRhQUVNajlSZkNfaFJ0T3IxOFF0UHVSOENiSFNwQ1Vla2JJRE9fUGVGejM?oc=5">国际油价日内跌超3%，巴基斯坦与美伊的外交接触仍在进行！</a><span>TradingKey｜2026-06-09 10:17 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMikAJBVV95cUxOalBiRUpCeEdjUlV4MENySHk5b1p0WEhJalhUZUIyWmZvRHpnblhlLVl2Sk1wVkhuaDczSkxUMS00SFhqWXZ0QTJhNGlQeFVWcDIzaVB6N0FZNlc4Tml4R1FLbWp1NGZKSXlKZVpnUmpmTHJvdzg1N3Vac3FzUHkyU3RwWnRyRTB3Q1NONElVMjIwWHR2eVhOQ3hoVnJnbEtnRzRUTzNqVmFUZlpyOTFBSTB4N2hVaE1kR3BlaHZvSGY3a3JVZlIxeHJ0aXVNZk9oeFRjeXFSOHF4aGUyNkVMb2dDUC1EWXdMN2tYTTlEcHVMQk5TVEc0OWZIcHNhMWJwRlZjbTk4UEprTVROUzlheQ?oc=5">欧元：东亚银行预计欧洲央行加息将限制欧元/美元的上涨空间</a><span>TMGM｜2026-06-09 02:00 UTC</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    
+    <section class="section">
+      <div class="section-head">
+        <h2>中国 A股重点关注</h2>
+        <div class="note">区分事实、推断和关注方向，避免把主题热度当成确定性</div>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <p class="lead">事实：【早报】证监会召开重磅会议，吴清发声；特朗普警告伊朗“有时候不得不打”。来源：财联社｜2026-06-09 12:11 UTC。 博时宏观观点：海外波动加大，A股风险偏好承压。来源：新浪财经｜2026-06-09 10:39 UTC。 渝开 发(000514):国信证券股份有限公司关于重庆渝开发股份有限公司主板向特定对象发行股票的上市保荐书。来源：中财网｜2026-06-09 11:20 UTC。</p>
+          <ul class="bullet-list">
+            <li>推断：如果政策边际没有超预期，A股增量资金仍会优先寻找 AI、算力和国产替代这些高弹性方向。</li>
+          </ul>
+        </article>
+        <aside class="source-box">
+          <ul class="source-list">
+            <li><a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE9sYUhKNGJwQ1lSN1BwbzBIaGRhbExwajNnMGhfTkV6TFdVbXg1UWd4a1k5cWMtYklmMGItc1BaenFmZkMwYzNfRg?oc=5">【早报】证监会召开重磅会议，吴清发声；特朗普警告伊朗“有时候不得不打”</a><span>财联社｜2026-06-09 12:11 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMi7gFBVV95cUxPVThRYjNIWG5ILU1RcFVLZ1ZkZm1raUhzdWlEbFFKa3M5QzItZ1FHQUI5OXo2Yks4Z0h0cUtwZW0tRU53T1UtYXJZcjhmck00U1g1Nzh6MDZlelJYdmVCc0JZekEtanJEQkNTbDBma3U4VFprWWl5aUhvSmdLY2xnM1lEWDBvUk9TNW5jSDFfNU1aa3VyTjNiMnVuYmVuakdZVGFsVkEzek5rQVA2VkhuVFVabWlXeHVaRGdfNU5LeXJoMF9nVkI0WTlXU09lQmh2SUZYZW1VSEQ4MjljNTRuWjF4YkdBdGRESjJsT3Jn?oc=5">博时宏观观点：海外波动加大，A股风险偏好承压</a><span>新浪财经｜2026-06-09 10:39 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9iTjJjbThFZF9VWnkxZjJEVHhraGw4ZHBaYUd4NWE0Sk5JY2JLS1dwbUN3bExJZkI2TlZSY0ktZ1dNSWxnakhaOXpUbXpIbVVnSWpVakJR?oc=5">渝开 发(000514):国信证券股份有限公司关于重庆渝开发股份有限公司主板向特定对象发行股票的上市保荐书</a><span>中财网｜2026-06-09 11:20 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTFB1MGxqOWpyRzdrcm9GQ050OUkxV1Y0c0o5MGRGQ21BZWRhWkdaS0V3cWE5alc2VlpBTy1uME9OU0RmLTdZWDRINQ?oc=5">【早报】深圳出手，“AI龙虾”支持政策来了；事关短线交易，证监会发新规</a><span>财联社｜2026-06-09 03:51 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE1jTmFQS3Y0MTZTdVVybjNoTGw2OXQyYWVjQWc5dmFHMXJzYWctQ1RTYy1QOTZ1UHpBLTlTUGtxZVJ1ek5wc1lSeWlUbjNZeDYxOGw4WldCMHZrRE4yNWl1LTd4cUxKMmJ6c3hoNQ?oc=5">头条文章</a><span>微博｜2026-06-09 01:05 UTC</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    
+    <section class="section">
+      <div class="section-head">
+        <h2>美股重点关注</h2>
+        <div class="note">晚间主要盯美债、科技龙头与监管口径</div>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <p class="lead">事实：Federal Reserve Board announces that results from its annual bank stress test will be released on Wednesday, June 24, at 4 p.m. EDT.。来源：Federal Reserve｜2026-06-09 20:00 UTC。 Agencies remove additional references to reputation risk。来源：Federal Reserve｜2026-06-02 15:00 UTC。 SEC Establishes Joint Data Standards as Required Under the Financial Data Transparency Act of 2022。来源：SEC｜2026-06-08 10:36 UTC。</p>
+          <ul class="bullet-list">
+            <li>推断：监管口径更密集时，高估值科技和金融基础设施板块都要提高对合规与披露风险的折价。</li>
+          </ul>
+        </article>
+        <aside class="source-box">
+          <ul class="source-list">
+            <li><a href="https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260609a.htm">Federal Reserve Board announces that results from its annual bank stress test will be released on Wednesday, June 24, at 4 p.m. EDT.</a><span>Federal Reserve｜2026-06-09 20:00 UTC</span></li>
+<li><a href="https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260602a.htm">Agencies remove additional references to reputation risk</a><span>Federal Reserve｜2026-06-02 15:00 UTC</span></li>
+<li><a href="https://www.sec.gov/newsroom/press-releases/2026-53-sec-establishes-joint-data-standards-required-under-financial-data-transparency-act-2022">SEC Establishes Joint Data Standards as Required Under the Financial Data Transparency Act of 2022</a><span>SEC｜2026-06-08 10:36 UTC</span></li>
+<li><a href="https://www.sec.gov/newsroom/press-releases/2026-52-sec-announces-new-members-small-business-capital-formation-advisory-committee">SEC Announces New Members of Small Business Capital Formation Advisory Committee</a><span>SEC｜2026-06-04 14:39 UTC</span></li>
+<li><a href="https://www.sec.gov/newsroom/press-releases/2026-51-sec-publishes-draft-strategic-plan-public-comment">SEC Publishes Draft Strategic Plan for Public Comment</a><span>SEC｜2026-06-02 10:30 UTC</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    
+    <section class="section">
+      <div class="section-head">
+        <h2>港股重点关注</h2>
+        <div class="note">互联网、金融、地产与南向资金是港股弹性的主分母</div>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <p class="lead">事实：AI科技周期进入下半场，港股市场AI含量最高恒生互联网ETF华夏(513330)收涨0.77%。来源：新浪财经｜2026-06-09 08:44 UTC。</p>
+          <ul class="bullet-list">
+            <li>推断：若政策线更强，港股金融与高股息会先接到配置盘，再看互联网是否接力。</li>
+          </ul>
+        </article>
+        <aside class="source-box">
+          <ul class="source-list">
+            <li><a href="https://news.google.com/rss/articles/CBMifkFVX3lxTE53c2JZX05JYUw0UWFuS3pXbHNlaGNOd1Rkckdud1NYcHNTNldMekxaRnBBeVdsOFM1OTBCeUozbUJxakI5NkxFTFBBcWpxRkJEVUViMlJoTGd6YlJyQlhodHFDNE4wVDY5VW1kRC1hMXpqLUtMNDJtQUdLazV2Zw?oc=5">AI科技周期进入下半场，港股市场AI含量最高恒生互联网ETF华夏(513330)收涨0.77%</a><span>新浪财经｜2026-06-09 08:44 UTC</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>三地市场状态图</h2>
+        <div class="note">邮件版会把图片内嵌，附件打开不会丢图</div>
+      </div>
+      <div class="grid-2">
+        <article class="card image-card">
+          <img src="../assets/morning-brief-2026-06-10-flows.svg" alt="三地市场状态图">
+          <div class="image-caption">先看开休市与互联互通，再看新闻流，最后才是板块方向，这样更容易避免把波动误读成趋势。</div>
+        </article>
+        <article class="card risk-box">
+          <p class="lead">今日风险提示与关键日程</p>
+          <ul class="bullet-list">
+            <li>A股：09:30 开盘；港股：09:30 开盘；美股：北京时间 21:30 开盘。</li>
+<li>若 A股与港股同时开市，盘中要同步观察北向/南向是否恢复成交，以判断上午的风格是否具备持续性。</li>
+<li>盘后继续盯央行、监管和交易所官方披露；若官方口径突然变化，早盘主线可能会在午后切换。</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section-head">
+        <h2>A股 / 美股 / 港股应重点关注的板块</h2>
+        <div class="note">这部分是关注方向，不是收益承诺；强制同时写出催化和风险。</div>
+      </div>
+      <div class="grid-4">
+        <article class="idea-card">
+  <h3>A股｜算力链 / 半导体 / 国产替代</h3>
+  <p><strong>关注理由：</strong>新闻流里如果 AI、芯片和大模型更密集，增量资金更愿意追逐高弹性成长；如果政策与监管口径更强，金融和制度受益链条更容易先被定价。</p>
+  <p><strong>催化因素：</strong>政策口径、成交额放大、核心龙头指引或海外科技股晚间反馈。</p>
+  <p><strong>主要风险：</strong>高位波动、估值消化不足，或北向/情绪没有同步放大。</p>
+</article>
+<article class="idea-card">
+  <h3>A股｜内需消费 / 汽车零部件 / 出海制造</h3>
+  <p><strong>关注理由：</strong>如果宏观稳增长与消费修复相关表述增多，内需链更适合看边际改善；若地缘、关税和能源新闻更密，资源对冲属性会更突出。</p>
+  <p><strong>催化因素：</strong>宏观政策增量、商品价格变化、地缘与贸易事件的边际升级或缓和。</p>
+  <p><strong>主要风险：</strong>价格传导慢、需求验证不足，或单纯主题化导致追高回撤。</p>
+</article>
+<article class="idea-card">
+  <h3>美股｜AI 基础设施 / 云 / 半导体</h3>
+  <p><strong>关注理由：</strong>美股仍是全球成长资产的估值锚，AI 龙头的资本开支、订单与监管口径会直接影响亚洲成长链的溢价。</p>
+  <p><strong>催化因素：</strong>Fed/SEC 更新、科技龙头新闻、10Y 美债收益率与纳指期货方向。</p>
+  <p><strong>主要风险：</strong>收益率上行压估值、监管强化或龙头业绩/指引不及预期。</p>
+</article>
+<article class="idea-card">
+  <h3>港股｜互联网平台 / 中概映射 / 交易所金融</h3>
+  <p><strong>关注理由：</strong>港股对海外情绪更敏感，平台经济和南向资金往往一起决定指数弹性；若政策线更强，高股息金融也容易成为避震仓位。</p>
+  <p><strong>催化因素：</strong>南向资金恢复、平台公司新闻、港交所披露与人民币汇率。</p>
+  <p><strong>主要风险：</strong>南向回流弱于预期、美元走强压制估值，或地产链拖累指数风险偏好。</p>
+</article>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section-head">
+        <h2>来源链接</h2>
+        <div class="note">优先展示已抓取到的公开官方/媒体信源；抓不到时保留空位，下次自动刷新。</div>
+      </div>
+      <div class="grid-2">
+        <article class="source-box">
+          <ul class="source-list">
+            <li><a href="https://news.google.com/rss/articles/CBMi1gRBVV95cUxObFZkbVBIa09ma1drcG8weFpuR1Q2dEFNQ0NtcTZja2NrQXhsV1hTWW5JdTZ2WGpaMWE2LWREbWZjcWpESFdBS3U0N1NMUGxSUWRPVHFVS05SUXdTSXdUQUV4UWFQR1l1ajZJMmo4WUdnbENWWVpvR2haNXZ0anVqMGVHeVUyQ3N0eVI1d21DYU9XZDY1MWtlOHBJUElPYk12RWkwS3ZxR21zVTRFd0RDQjNZaXlRZVljaHpTLVpHOGZISkRoci0zaV80SUMyQ1Fyd01mLVdyTnNJQnlLa3BuNUdoTnFtZE5wVzJ3V1hvU2ZUcnliVzh2c2NEVnplVHBqc3B3YUQ1dnYxYk9vUkFfa1Z1NWR3d2xBd3luSUxsbmVmR0V2ODlyUllEU1JYWUxDbmcxckwzWTZUVWk1QXgtXzVVc2hNU3JtOHlydDdLak5GcjZHZmdoOEhjRGd3VE9YQWNvWmlvcXIxSnN4QlNsX2gyMlFHSWZFcVM1cWlranVHUW1yQWJBYUd4Z2c5Wlk0b1hhakNoamt2eUxtV09Fd05qTnBhZG01VzZ0eTNYWGQ4NjNXUkNCTVpBRE9ab2UtVGt4QjRGMG5IcE85eFRfYU1hVmxUM1pWN1hBWU80Rlc2aFNIVUhYUnBxSGo0Q1cyUkEtazRXWTZKSk5Qd3B0bk9fRTY4YzNlZkxFaEpxblBKRDdRU0xYaU5ZeC1qV2RvdTNfYnVhdHZWMnVld0N6VDF0S2JEUWFKako2UWtJZ2pTUnNKMTd1YmVGLWhvMFdvYThvLWxR?oc=5">黄金恐再跌向4000美元？分析师警告技术面严重破位，但长期牛市逻辑未变</a><span>新浪财经｜2026-06-09 17:39 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTFByTElvVTNUZFN2NUdGTUpXZkdBV1RGbGp1RDlLMk80ZmpCUGJ0ME00THpSb3lZNllYV1ZfRG9ma2k1d2lJak5ZZGtYWlpCeWlVc0U5bzVUSmk1UUhEZmtJWjB2RmYwYi1wYUY1ZnFYbVhRUQ?oc=5">富达国际:股市波动再现 高利率及通胀可控料债市迎来收益布局时机</a><span>AASTOCKS.com｜2026-06-08 04:51 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE5fWThjOHFKZUlDZE1nczFwdmh5Q1E1YWtqQkg3YWwydTg5b1hxSXAzdnA1b3NvX0RxVmYwcXBuUGVRbWxXLS1UbkJLYmpFR19FeDdqbnBsdFp3WlNGZGdkUmxRdFJpazN5TXhESElYS3ZSMUhLcFhzTQ?oc=5">特朗普与伊朗双双释放缓和信号！油价狂飙后回落，美股大涨、美元守住100、比特币突破6.4万美元</a><span>FX168财经｜2026-06-08 18:59 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMi8AFBVV95cUxNYlJKcy1tT2ZTUWN6YzMzT1JrekpXVTJsQWNNOFNNN1UzVzg4WVE5MG85OWNVcGNZWk9vbVhuWW9tY0dnN3hZT1A5NXhHRzdnN2t2SW5jcVZPZzloQnlVXzdDZlVqVURPNXktaEUtN1ZMc0ltT1ZJUF85UW1STkIxaGI4Nm9qRW1VUWhXQUxDUXFTY2NYTjhPUW1DVmFsR1hLTTlCOU1XRjhNZGdINzZMTVRfcU5CQ1JldnNZc1REMkFheWxkRjRhQUVNajlSZkNfaFJ0T3IxOFF0UHVSOENiSFNwQ1Vla2JJRE9fUGVGejM?oc=5">国际油价日内跌超3%，巴基斯坦与美伊的外交接触仍在进行！</a><span>TradingKey｜2026-06-09 10:17 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMikAJBVV95cUxOalBiRUpCeEdjUlV4MENySHk5b1p0WEhJalhUZUIyWmZvRHpnblhlLVl2Sk1wVkhuaDczSkxUMS00SFhqWXZ0QTJhNGlQeFVWcDIzaVB6N0FZNlc4Tml4R1FLbWp1NGZKSXlKZVpnUmpmTHJvdzg1N3Vac3FzUHkyU3RwWnRyRTB3Q1NONElVMjIwWHR2eVhOQ3hoVnJnbEtnRzRUTzNqVmFUZlpyOTFBSTB4N2hVaE1kR3BlaHZvSGY3a3JVZlIxeHJ0aXVNZk9oeFRjeXFSOHF4aGUyNkVMb2dDUC1EWXdMN2tYTTlEcHVMQk5TVEc0OWZIcHNhMWJwRlZjbTk4UEprTVROUzlheQ?oc=5">欧元：东亚银行预计欧洲央行加息将限制欧元/美元的上涨空间</a><span>TMGM｜2026-06-09 02:00 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMi0gJBVV95cUxPUVFMc0JLTmVlZHFuSTBqMHR1T3MxM2xnM0VCVFhKaTRZdlBVRy1RdURwNmN3UERnZnR0eUs5Tmh4UWQ4VE1ueUhiVFRWUG9IWXlRbXZTTi1ZUGhPMWJ6Q2Q4dnB1QXh2NjUzMnJtQmVQTld4SWZhNU1FbDA4akEwXzdDYWxENUpzOElZNjFzUVAxaFVjaTZMQzk1WXZxNkJ3eDlIVVRzV2ZTWXN1TjFweEJncEEyS2JzUnliNmFnWkE3YWh0cUZrVTBMdjNiZDRFTmdtV2ZsclFLSEZHQndsRndmRVhBaHhNa05DYUlWQU1abFA0amtOZlluTW9WQ0RFdmF3bU1yNEFqLTRsRUM3REhlNjRHY3J0ZlJfdmRMREZkbkFmR2F4UWFYTG02b0dzSjU4YWNJSElQbzZZNlg2aW9zR0pfWHdWd0tsbjZnNk1QQQ?oc=5">黄金抹去年内全部涨幅之际，中国央行连续第19个月增持黄金</a><span>NAI500｜2026-06-08 00:34 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE9sYUhKNGJwQ1lSN1BwbzBIaGRhbExwajNnMGhfTkV6TFdVbXg1UWd4a1k5cWMtYklmMGItc1BaenFmZkMwYzNfRg?oc=5">【早报】证监会召开重磅会议，吴清发声；特朗普警告伊朗“有时候不得不打”</a><span>财联社｜2026-06-09 12:11 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMi7gFBVV95cUxPVThRYjNIWG5ILU1RcFVLZ1ZkZm1raUhzdWlEbFFKa3M5QzItZ1FHQUI5OXo2Yks4Z0h0cUtwZW0tRU53T1UtYXJZcjhmck00U1g1Nzh6MDZlelJYdmVCc0JZekEtanJEQkNTbDBma3U4VFprWWl5aUhvSmdLY2xnM1lEWDBvUk9TNW5jSDFfNU1aa3VyTjNiMnVuYmVuakdZVGFsVkEzek5rQVA2VkhuVFVabWlXeHVaRGdfNU5LeXJoMF9nVkI0WTlXU09lQmh2SUZYZW1VSEQ4MjljNTRuWjF4YkdBdGRESjJsT3Jn?oc=5">博时宏观观点：海外波动加大，A股风险偏好承压</a><span>新浪财经｜2026-06-09 10:39 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9iTjJjbThFZF9VWnkxZjJEVHhraGw4ZHBaYUd4NWE0Sk5JY2JLS1dwbUN3bExJZkI2TlZSY0ktZ1dNSWxnakhaOXpUbXpIbVVnSWpVakJR?oc=5">渝开 发(000514):国信证券股份有限公司关于重庆渝开发股份有限公司主板向特定对象发行股票的上市保荐书</a><span>中财网｜2026-06-09 11:20 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTFB1MGxqOWpyRzdrcm9GQ050OUkxV1Y0c0o5MGRGQ21BZWRhWkdaS0V3cWE5alc2VlpBTy1uME9OU0RmLTdZWDRINQ?oc=5">【早报】深圳出手，“AI龙虾”支持政策来了；事关短线交易，证监会发新规</a><span>财联社｜2026-06-09 03:51 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE1jTmFQS3Y0MTZTdVVybjNoTGw2OXQyYWVjQWc5dmFHMXJzYWctQ1RTYy1QOTZ1UHpBLTlTUGtxZVJ1ek5wc1lSeWlUbjNZeDYxOGw4WldCMHZrRE4yNWl1LTd4cUxKMmJ6c3hoNQ?oc=5">头条文章</a><span>微博｜2026-06-09 01:05 UTC</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE84eHFrenN0elFvdDVLeHRsazFZT05aZkhFT094R3lvVDg2MUhKWUhtYnV5d2VHeVQ4ZFJnT1F2SlAzNDFqVDNZdzFCSDdsc08tZkRLZ2l3?oc=5">弘信电子(300657):华泰联合证券有限责任公司关于厦门弘信电子科技集团股份有限公司2024年度向特定对象发行股票并在创业板上市之上市保荐书- CFi.CN 中财网</a><span>中财网｜2026-06-09 08:45 UTC</span></li>
+<li><a href="https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260609a.htm">Federal Reserve Board announces that results from its annual bank stress test will be released on Wednesday, June 24, at 4 p.m. EDT.</a><span>Federal Reserve｜2026-06-09 20:00 UTC</span></li>
+<li><a href="https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260602a.htm">Agencies remove additional references to reputation risk</a><span>Federal Reserve｜2026-06-02 15:00 UTC</span></li>
+          </ul>
+        </article>
+        <article class="card">
+          <p class="lead">免责声明</p>
+          <ul class="bullet-list">
+            <li>事实：本文引用公开信源与交易所/监管机构 RSS 或新闻聚合结果，具体原文以链接跳转页面为准。</li>
+            <li>推断：文内对政策、行业、资金与风格的描述属于信息整理后的研究判断，不构成收益承诺或个股推荐。</li>
+            <li>关注方向：仅用于帮助早盘排序“先看什么、为什么看、主要风险在哪”，不能替代独立研究与风控。</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+    <div class="footer">生成说明：本页由自动化脚本按日期、市场开休市状态和公开信源动态生成；如遇主要市场休市，仍保留假期/风险日历版页面。邮件版会将 SVG 图片内嵌为 data URL，保证离线打开不丢图。</div>
+  </main>
+</body>
+</html>

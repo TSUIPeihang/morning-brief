@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-label="三地市场状态图">
+  <rect width="1200" height="720" fill="#f4f7f5"/>
+  <g font-family="Arial, PingFang SC, Microsoft YaHei">
+    <text x="80" y="90" font-size="40" fill="#13221f" font-weight="700">2026-06-10 三地市场状态</text>
+    <rect x="80" y="160" width="290" height="150" rx="24" fill="#0c7a53"/>
+    <rect x="455" y="160" width="290" height="150" rx="24" fill="#133c55"/>
+    <rect x="830" y="160" width="290" height="150" rx="24" fill="#9a5c18"/>
+    <text x="112" y="222" font-size="36" fill="#ffffff" font-weight="700">A股</text>
+    <text x="112" y="272" font-size="28" fill="#dff4eb">正常交易</text>
+    <text x="487" y="222" font-size="36" fill="#ffffff" font-weight="700">港股</text>
+    <text x="487" y="272" font-size="28" fill="#dfebf4">正常交易</text>
+    <text x="862" y="222" font-size="36" fill="#ffffff" font-weight="700">美股</text>
+    <text x="862" y="272" font-size="28" fill="#fff0d7">今晚正常交易</text>
+    <path d="M370 235 H455" stroke="#8aa89a" stroke-width="10"/>
+    <path d="M745 235 H830" stroke="#8aa89a" stroke-width="10"/>
+    <text x="80" y="420" font-size="26" fill="#42544d">使用方式：先看交易状态，再看官方/媒体信源，最后才是建议关注方向。</text>
+    <text x="80" y="474" font-size="26" fill="#42544d">如果三地不同步开市，白天盘面更容易出现“本地资金先定价、晚间海外再校正”的节奏。</text>
+  </g>
+</svg>
